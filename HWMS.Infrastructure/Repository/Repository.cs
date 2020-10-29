@@ -14,7 +14,7 @@ namespace HWMS.Infrastructure.Repository
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            GC.SuppressFinalize(this);
         }
 
         public IQueryable<TEntity> GetAll()

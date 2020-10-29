@@ -1,5 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <ItemGroup>
+    <ProjectReference Include="..\HWMS.Application\HWMS.Application.csproj" />
+    <ProjectReference Include="..\HWMS.DoMain\HWMS.DoMain.csproj" />
+    <ProjectReference Include="..\HWMS.Infrastructure\HWMS.Infrastructure.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>

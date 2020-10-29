@@ -23,7 +23,8 @@ namespace HWMS.Application.Services
         {
 
             //this._IOrderRepository.GetAll().ProjectTo<OrderViewModel>()
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+            return null;
         }
 
         public OrderViewModel GetById(Guid id)
