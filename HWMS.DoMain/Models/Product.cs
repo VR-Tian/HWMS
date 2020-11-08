@@ -2,9 +2,9 @@ using System;
 
 namespace HWMS.DoMain.Models
 {
-    public class OrderItem
-    {   
+    public class Product
+    {
         public Guid Id { get; set; }
-        public Product Product { get; set; }
+        public string Name { get; set; }
     }
 }

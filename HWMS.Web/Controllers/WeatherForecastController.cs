@@ -20,7 +20,7 @@ namespace HWMS.Web.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger,IOrderAppService OrderAppService)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOrderAppService OrderAppService)
         {
             _logger = logger;
             this._OrderAppService = OrderAppService;
@@ -29,7 +29,7 @@ namespace HWMS.Web.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            _OrderAppService.GetAll();
+            var getdata = _OrderAppService.GetAll();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

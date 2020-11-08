@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using HWMS.Application.Interfaces;
 using HWMS.Application.ViewModels;
@@ -9,10 +11,12 @@ namespace HWMS.Application.Services
 {
     public class OrderAppService : IOrderAppService
     {
-        private readonly IOrderRepository _IOrderRepository;
-        public OrderAppService(IOrderRepository IOrderRepository)
+        private readonly IOrderRepository _OrderRepository;
+        private readonly IMapper _Mapper;
+        public OrderAppService(IOrderRepository IOrderRepository, IMapper Mapper)
         {
-            this._IOrderRepository = IOrderRepository;
+            this._OrderRepository = IOrderRepository;
+            this._Mapper = Mapper;
         }
         public void Dispose()
         {
@@ -22,9 +26,8 @@ namespace HWMS.Application.Services
         public IEnumerable<OrderViewModel> GetAll()
         {
 
-            //this._IOrderRepository.GetAll().ProjectTo<OrderViewModel>()
+            return this._OrderRepository.GetAll().ProjectTo<OrderViewModel>(_Mapper.ConfigurationProvider).ToList();
             // throw new NotImplementedException();
-            return null;
         }
 
         public OrderViewModel GetById(Guid id)

@@ -65,3 +65,5 @@ D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\HWMS.Application.pdb
 D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\HWMS.DoMain.pdb
 D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\HWMS.Infrastructure.pdb
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.csproj.CopyComplete
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

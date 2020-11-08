@@ -2,11 +2,19 @@
 
 namespace HWMS.DoMain.Models
 {
+    /// <summary>
+    /// 订单实体
+    /// </summary>
     public class Order
     {
         public Order(Guid UserID)
         {
             this._OrderDate = DateTime.UtcNow;
+        }
+
+        public Order()
+        {
+            
         }
 
         public Guid Id { get; private set; }
@@ -27,6 +35,7 @@ namespace HWMS.DoMain.Models
 
         public void PlaceOrder()
         {
+            //业务逻辑在领域层如何体现。
             throw new NotImplementedException();
         }
 

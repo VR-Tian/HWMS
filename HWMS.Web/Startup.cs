@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using AutoMapper;
 using HWMS.Application.Interfaces;
 using HWMS.Application.Services;
 using HWMS.DoMain.Interfaces;
+using HWMS.Infrastructure.Contexts;
 using HWMS.Infrastructure.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,8 +33,10 @@ namespace HWMS.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<OrderContext>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderAppService, OrderAppService>();
+            services.AddAutoMapper(Assembly.Load("HWMS.Application"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

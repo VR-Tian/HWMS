@@ -2,44 +2,55 @@ using System;
 using System.Linq;
 using HWMS.DoMain.Interfaces;
 using HWMS.DoMain.Models;
+using HWMS.Infrastructure.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace HWMS.Infrastructure.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
+        protected readonly OrderContext _OrderContext;
+        protected readonly DbSet<TEntity> _DbSet;
+        public Repository(OrderContext OrderContext)
+        {
+            this._OrderContext = OrderContext;
+            this._DbSet = this._OrderContext.Set<TEntity>();
+        }
+
         public void Add(TEntity obj)
         {
-            throw new NotImplementedException();
+            this._DbSet.Add(obj);
         }
 
         public void Dispose()
         {
+            this._OrderContext.Dispose();
             GC.SuppressFinalize(this);
         }
 
         public IQueryable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return this._DbSet;
         }
 
         public TEntity GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return this._DbSet.Find(id);
         }
 
         public void Remove(Guid id)
         {
-            throw new NotImplementedException();
+            this._DbSet.Remove(GetById(id));
         }
 
         public int SaveChanges()
         {
-            throw new NotImplementedException();
+            return this._OrderContext.SaveChanges();
         }
 
         public void Update(TEntity obj)
         {
-            throw new NotImplementedException();
+            this._DbSet.Update(obj);
         }
     }
 }
