@@ -2,6 +2,24 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "FluentValidation/9.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "MediatR/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "dependencies": {
@@ -1708,16 +1726,70 @@
       "HWMS.DoMain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "HWMS.DoMain.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/HWMS.DoMain.dll": {}
         },
         "runtime": {
           "bin/placeholder/HWMS.DoMain.dll": {}
         }
+      },
+      "HWMS.DoMain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "MediatR": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HWMS.DoMain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HWMS.DoMain.Core.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "FluentValidation/9.3.0": {
+      "sha512": "C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.9.3.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "MediatR/9.0.0": {
+      "sha512": "8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+      "type": "package",
+      "path": "mediatr/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.dll",
+        "lib/net461/MediatR.xml",
+        "lib/netstandard2.0/MediatR.dll",
+        "lib/netstandard2.0/MediatR.xml",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.9.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
@@ -6235,11 +6307,18 @@
       "type": "project",
       "path": "../HWMS.DoMain/HWMS.DoMain.csproj",
       "msbuildProject": "../HWMS.DoMain/HWMS.DoMain.csproj"
+    },
+    "HWMS.DoMain.Core/1.0.0": {
+      "type": "project",
+      "path": "../HWMS.DoMain.Core/HWMS.DoMain.Core.csproj",
+      "msbuildProject": "../HWMS.DoMain.Core/HWMS.DoMain.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "HWMS.DoMain >= 1.0.0",
+      "HWMS.DoMain.Core >= 1.0.0",
+      "MediatR >= 9.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
@@ -6270,6 +6349,9 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
+              "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj"
+            },
             "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj": {
               "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj"
             }
@@ -6285,6 +6367,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "MediatR": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.9, )"

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -15,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HWMS.DoMain\HWMS.DoMain.csproj" />
+    <ProjectReference Include="..\HWMS.DoMain.Core\HWMS.DoMain.Core.csproj" />
   </ItemGroup>
 
 </Project>

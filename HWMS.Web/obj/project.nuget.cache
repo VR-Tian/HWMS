@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "yk1n/VsD5XvPqvwJ+HMeQ0FhT4hQxX0MhMlFGSSAPxhb57nojPbQcqezxF7C6DuDKkYtIWnUkqJ3Be66ib+7vQ==",
+  "dgSpecHash": "Gi0MK39xKINpcVlGN826x8nN3Wf6321p1JIH82mmV4ZIDwWGY6+jEk+2eXvk+KXo7Ki4aQ4/AnGpWzmelQ3jNw==",
   "success": true,
   "projectFilePath": "D:\\IDE\\HWMSApp\\HWMS.Web\\HWMS.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vrtian\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

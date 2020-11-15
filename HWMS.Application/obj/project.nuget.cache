@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Mm1LpNJyttlM4ChIIA6ckGw50nEgcfhQOtdOqXPBrkIayf5Qbizdoh26aj3IUGcrRgiS1Yqn6YkVWd/GmqWnvQ==",
+  "dgSpecHash": "XHW/rGW43pbl7wKJ3EPgk62m0hb0pA7Mx4aggseTkSAIGvORIBVGH6ywn8Hq6Fer1lMGEZlfcWMk3dqwHIYBCQ==",
   "success": true,
   "projectFilePath": "D:\\IDE\\HWMSApp\\HWMS.Application\\HWMS.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vrtian\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

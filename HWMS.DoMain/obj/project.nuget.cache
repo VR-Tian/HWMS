@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1nrbT1vHRD85svjUX2eQU+KRzNL47opMpL5aLZwNMsWIzEfuoa1HZNNPhvRpBJY6/hECQGP+31UAFRaqxyH0gQ==",
+  "dgSpecHash": "LIAgMRQDOXHHkWe+/7rC/Y12Ae2MLlvBGotowU9RGZd5xbKhZhIOiecgiBtUAJzGZ36wEZcCPyZy6KlGqRFt9Q==",
   "success": true,
   "projectFilePath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vrtian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],

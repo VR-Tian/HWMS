@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using HWMS.DoMain.Core.Models;
 
 namespace HWMS.DoMain.Models
 {
     /// <summary>
     /// 订单实体
     /// </summary>
-    public class Order
+    public class Order : Entity
     {
         public Order(Guid UserID)
         {
@@ -14,10 +16,13 @@ namespace HWMS.DoMain.Models
 
         public Order()
         {
-            
+            if (this.Id == Guid.Empty)
+            {
+                this.Id = Guid.NewGuid();
+                this._OrderDate = DateTime.UtcNow;
+                // this._OrderNumber
+            }
         }
-
-        public Guid Id { get; private set; }
 
         private string _OrderNumber;
         public string OrderNumber
@@ -32,12 +37,8 @@ namespace HWMS.DoMain.Models
             get { return _OrderDate; }
             private set { _OrderDate = value; }
         }
-
-        public void PlaceOrder()
-        {
-            //业务逻辑在领域层如何体现。
-            throw new NotImplementedException();
-        }
+        
+        public Address Address { get; private set; }
 
     }
 }

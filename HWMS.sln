@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.DoMain", "HWMS.DoMain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.Infrastructure", "HWMS.Infrastructure\HWMS.Infrastructure.csproj", "{8A726273-C827-4AC8-A7D9-2E5D343A67CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.DoMain.Core", "HWMS.DoMain.Core\HWMS.DoMain.Core.csproj", "{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{8A726273-C827-4AC8-A7D9-2E5D343A67CD}.Release|x64.Build.0 = Release|Any CPU
 		{8A726273-C827-4AC8-A7D9-2E5D343A67CD}.Release|x86.ActiveCfg = Release|Any CPU
 		{8A726273-C827-4AC8-A7D9-2E5D343A67CD}.Release|x86.Build.0 = Release|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Debug|x64.Build.0 = Debug|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Debug|x86.Build.0 = Debug|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x64.ActiveCfg = Release|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x64.Build.0 = Release|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x86.ActiveCfg = Release|Any CPU
+		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

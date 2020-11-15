@@ -5,21 +5,30 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using HWMS.Application.Interfaces;
 using HWMS.Application.ViewModels;
+using HWMS.DoMain.Commands.Order;
+using HWMS.DoMain.Core.Bus;
 using HWMS.DoMain.Interfaces;
+using HWMS.DoMain.Models;
 
 namespace HWMS.Application.Services
 {
+    /// <summary>
+    /// 订单服务
+    /// </summary>
     public class OrderAppService : IOrderAppService
     {
         private readonly IOrderRepository _OrderRepository;
         private readonly IMapper _Mapper;
-        public OrderAppService(IOrderRepository IOrderRepository, IMapper Mapper)
+        private readonly IMediatorHandler _Bus;
+        public OrderAppService(IOrderRepository IOrderRepository, IMapper Mapper, IMediatorHandler bus)
         {
+            this._Bus = bus;
             this._OrderRepository = IOrderRepository;
             this._Mapper = Mapper;
         }
         public void Dispose()
         {
+            this._OrderRepository.Dispose();
             GC.SuppressFinalize(this);
         }
 
@@ -37,7 +46,21 @@ namespace HWMS.Application.Services
 
         public void Register(OrderViewModel OrderViewModel)
         {
-            throw new NotImplementedException();
+            //TODO
+            //1服务层的职责：只协调（调度）各个业务间的工作流。（直接引用领域实体的不妥之处）
+            //2如何验证、在哪里验证实体字段合法性
+            //3如何对系统业务字段进行内部赋值。创建时间，唯一ID，订单号等。
+
+            //DDD:
+            //领域服务层来完成业务逻辑
+            // var registerModel = this._Mapper.Map<Order>(OrderViewModel);
+            // this._OrderRepository.Add(registerModel);
+            // this._OrderRepository.SaveChanges();
+
+
+            var registerCommand = this._Mapper.Map<RegisterOrderCommand>(OrderViewModel);
+            this._Bus.SendCommand(registerCommand);
+
         }
 
         public void Remove(Guid id)

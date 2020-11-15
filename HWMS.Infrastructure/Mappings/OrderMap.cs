@@ -19,6 +19,22 @@ namespace HWMS.Infrastructure.Mappings
             .HasColumnType("Datetime")
             .IsRequired();
 
+            builder.OwnsOne(s => s.Address, ar =>
+            {
+                ar.Property(s => s.City)
+                    .HasColumnName("Province")
+                    .HasColumnType("varchar(50)");
+                ar.Property(s => s.Province)
+                    .HasColumnName("City")
+                    .HasColumnType("varchar(50)");
+                ar.Property(s => s.Province)
+                .HasColumnName("County")
+                .HasColumnType("varchar(50)");
+                ar.Property(s => s.Province)
+               .HasColumnName("Street")
+               .HasColumnType("varchar(50)");
+            });
+
         }
     }
 }

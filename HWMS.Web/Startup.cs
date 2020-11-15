@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 using AutoMapper;
 using HWMS.Application.Interfaces;
 using HWMS.Application.Services;
+using HWMS.DoMain.Core.Bus;
 using HWMS.DoMain.Interfaces;
+using HWMS.Infrastructure.Bus;
 using HWMS.Infrastructure.Contexts;
 using HWMS.Infrastructure.Repository;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,9 +37,12 @@ namespace HWMS.Web
         {
             services.AddControllers();
             services.AddDbContext<OrderContext>();
+            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
+            services.AddAutoMapper(Assembly.Load("HWMS.Application"));
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderAppService, OrderAppService>();
-            services.AddAutoMapper(Assembly.Load("HWMS.Application"));
+            services.AddScoped<IMediatorHandler, InMemoryBus>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

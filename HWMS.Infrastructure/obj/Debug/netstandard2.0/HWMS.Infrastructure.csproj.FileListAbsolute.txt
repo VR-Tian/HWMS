@@ -10,3 +10,5 @@ D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Debug\netstandard2.0\HWMS.Infrastructure.
 D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Debug\netstandard2.0\HWMS.DoMain.dll
 D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Debug\netstandard2.0\HWMS.DoMain.pdb
 D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Debug\netstandard2.0\HWMS.Infrastructure.csproj.CopyComplete
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Debug\netstandard2.0\HWMS.DoMain.Core.dll
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Debug\netstandard2.0\HWMS.DoMain.Core.pdb

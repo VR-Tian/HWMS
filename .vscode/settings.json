@@ -1,0 +1,17 @@
+{
+    "background.customImages": [
+        "file:///D:/自考/1604839435141.jpg" //图片地址
+    ],
+    "background.style": {
+        "content": "''",
+        "pointer-events": "none",
+        "position": "fixed", //图片位置
+        "width": "80%",
+        "height": "50%",
+        "z-index": "9999",
+        "background.repeat": "no-repeat",
+        "background-size": "100%,auto", //图片大小
+        "opacity": 0.1 //透明度
+    },
+    "background.useDefault": false,
+}
