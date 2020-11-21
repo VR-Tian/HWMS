@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using HWMS.DoMain.Core.Bus;
 using HWMS.DoMain.Core.Commands;
+using HWMS.DoMain.Core.Events;
 using MediatR;
 
 namespace HWMS.Infrastructure.Bus
@@ -11,12 +13,20 @@ namespace HWMS.Infrastructure.Bus
     /// </summary>
     public sealed class InMemoryBus : IMediatorHandler
     {
-        
-        private readonly IMediator _mediator;
 
-        public InMemoryBus(IMediator mediator)
+        private readonly IMediator _Mediator;
+
+        /// <summary>
+        /// 服务工厂
+        /// </summary>
+        private readonly ServiceFactory _ServiceFactory;
+
+        private static readonly ConcurrentDictionary<Type, object> _requestHandlers = new ConcurrentDictionary<Type, object>();
+
+        public InMemoryBus(IMediator mediator, ServiceFactory serviceFactory)
         {
-            _mediator = mediator;
+            _Mediator = mediator;
+            this._ServiceFactory = serviceFactory;
         }
 
         /// <summary>
@@ -28,8 +38,13 @@ namespace HWMS.Infrastructure.Bus
         /// <returns></returns>
         public Task SendCommand<T>(T command) where T : Command
         {
-            return _mediator.Send(command);//这里要注意下 command 对象
+            return _Mediator.Send(command);//这里要注意下 command 对象
         }
 
+        public Task RaiseEvent<T>(T event1) where T : Event
+        {
+            // MediatR中介者模式中的第二种方法，发布/订阅模式
+            return _Mediator.Publish(event1);
+        }
     }
 }

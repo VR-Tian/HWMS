@@ -9,19 +9,21 @@ namespace HWMS.DoMain.Models
     /// </summary>
     public class Order : Entity
     {
-        public Order(Guid UserID)
+        public Order(Guid userID, string ordernumber, DateTime createDate)
         {
-            this._OrderDate = DateTime.UtcNow;
+            this._OrderDate = createDate;
+            this.Id = userID;
+            this.OrderNumber = ordernumber;
         }
 
         public Order()
         {
-            if (this.Id == Guid.Empty)
-            {
-                this.Id = Guid.NewGuid();
-                this._OrderDate = DateTime.UtcNow;
-                // this._OrderNumber
-            }
+            // if (this.Id == Guid.Empty)
+            // {
+            //     this.Id = Guid.NewGuid();
+            //     this._OrderDate = DateTime.UtcNow;
+            //     // this._OrderNumber
+            // }
         }
 
         private string _OrderNumber;
@@ -37,7 +39,7 @@ namespace HWMS.DoMain.Models
             get { return _OrderDate; }
             private set { _OrderDate = value; }
         }
-        
+
         public Address Address { get; private set; }
 
     }

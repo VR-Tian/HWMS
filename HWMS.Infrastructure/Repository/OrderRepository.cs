@@ -10,6 +10,12 @@ namespace HWMS.Infrastructure.Repository
     {
         public OrderRepository(OrderContext OrderContext) : base(OrderContext)
         {
+
+        }
+
+        public Order GetOrderNumber(string orderNumber)
+        {
+            return this._OrderContext.Orders.Where(t => t.OrderNumber == orderNumber).FirstOrDefault();
         }
     }
 }

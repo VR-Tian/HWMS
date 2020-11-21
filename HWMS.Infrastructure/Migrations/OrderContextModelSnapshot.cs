@@ -37,6 +37,38 @@ namespace HWMS.Infrastructure.Migrations
 
                     b.ToTable("Orders");
                 });
+
+            modelBuilder.Entity("HWMS.DoMain.Models.Order", b =>
+                {
+                    b.OwnsOne("HWMS.DoMain.Models.Address", "Address", b1 =>
+                        {
+                            b1.Property<Guid>("OrderId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("City")
+                                .HasColumnName("City")
+                                .HasColumnType("varchar(50)");
+
+                            b1.Property<string>("County")
+                                .HasColumnName("County")
+                                .HasColumnType("varchar(50)");
+
+                            b1.Property<string>("Province")
+                                .HasColumnName("Province")
+                                .HasColumnType("varchar(50)");
+
+                            b1.Property<string>("Street")
+                                .HasColumnName("Street")
+                                .HasColumnType("varchar(50)");
+
+                            b1.HasKey("OrderId");
+
+                            b1.ToTable("Orders");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrderId");
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }

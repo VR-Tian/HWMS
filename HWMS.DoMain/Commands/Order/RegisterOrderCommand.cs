@@ -12,7 +12,7 @@ namespace HWMS.DoMain.Commands.Order
 
         public override bool IsValid()
         {
-            ValidationResult = new RegisterOrderCommandValidation().Validate(this);//注意：这个就是命令验证，我们会在下边实现它
+            ValidationResult = new RegisterOrderCommandValidation().Validate(this);//命令验证
             return ValidationResult.IsValid;
         }
     }

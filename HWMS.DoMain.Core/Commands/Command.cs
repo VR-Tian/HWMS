@@ -4,6 +4,9 @@ using MediatR;
 
 namespace HWMS.DoMain.Core.Commands
 {
+    /// <summary>
+    /// 抽象命令基类
+    /// </summary>
     public abstract class Command : IRequest
     {
         //时间戳

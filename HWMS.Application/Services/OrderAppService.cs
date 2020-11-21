@@ -8,7 +8,6 @@ using HWMS.Application.ViewModels;
 using HWMS.DoMain.Commands.Order;
 using HWMS.DoMain.Core.Bus;
 using HWMS.DoMain.Interfaces;
-using HWMS.DoMain.Models;
 
 namespace HWMS.Application.Services
 {
@@ -20,11 +19,13 @@ namespace HWMS.Application.Services
         private readonly IOrderRepository _OrderRepository;
         private readonly IMapper _Mapper;
         private readonly IMediatorHandler _Bus;
-        public OrderAppService(IOrderRepository IOrderRepository, IMapper Mapper, IMediatorHandler bus)
+        private readonly IUnitOfWork _UnitOfWork;
+        public OrderAppService(IUnitOfWork uow, IOrderRepository IOrderRepository, IMapper Mapper, IMediatorHandler bus)
         {
             this._Bus = bus;
             this._OrderRepository = IOrderRepository;
             this._Mapper = Mapper;
+            this._UnitOfWork = uow;
         }
         public void Dispose()
         {
@@ -58,6 +59,8 @@ namespace HWMS.Application.Services
             // this._OrderRepository.SaveChanges();
 
 
+            //通过Mediator处理程序分发命令
+            //执行顺序：验证 -> 通知 -> 注册
             var registerCommand = this._Mapper.Map<RegisterOrderCommand>(OrderViewModel);
             this._Bus.SendCommand(registerCommand);
 

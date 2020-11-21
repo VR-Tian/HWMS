@@ -6,6 +6,6 @@ namespace HWMS.DoMain.Interfaces
 {
     public interface IOrderRepository:IRepository<Order>
     {
-        
+        Order GetOrderNumber(string orderNumber);
     }
 }

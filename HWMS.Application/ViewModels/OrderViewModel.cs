@@ -10,21 +10,21 @@ namespace HWMS.Application.ViewModels
     /// </summary>
     public class OrderViewModel
     {
-        [Key]
+        // [Key]
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage = "The OrderNumber is Required")]
-        [MinLength(2)]
-        [MaxLength(100)]
-        [DisplayName("OrderNumber")]
+        // [Required(ErrorMessage = "The OrderNumber is Required")]
+        // [MinLength(2)]
+        // [MaxLength(100)]
+        // [DisplayName("OrderNumber")]
         public string OrderNumber { get; set; }
 
 
         // <summary>
         /// 省份
         /// </summary>
-        [Required(ErrorMessage = "The Province is Required")]
-        [DisplayName("Province")]
+        // [Required(ErrorMessage = "The Province is Required")]
+        // [DisplayName("Province")]
         public string Province { get; set; }
 
         /// <summary>

@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 using AutoMapper;
 using HWMS.Application.Interfaces;
 using HWMS.Application.Services;
+using HWMS.DoMain.CommandHandlers;
+using HWMS.DoMain.Commands.Order;
 using HWMS.DoMain.Core.Bus;
+using HWMS.DoMain.Core.Notifications;
+using HWMS.DoMain.EventHandlers;
+using HWMS.DoMain.Events;
 using HWMS.DoMain.Interfaces;
+using HWMS.Infrastructure;
 using HWMS.Infrastructure.Bus;
 using HWMS.Infrastructure.Contexts;
 using HWMS.Infrastructure.Repository;
@@ -39,10 +45,17 @@ namespace HWMS.Web
             services.AddDbContext<OrderContext>();
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
             services.AddAutoMapper(Assembly.Load("HWMS.Application"));
+            services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderAppService, OrderAppService>();
-            services.AddScoped<IMediatorHandler, InMemoryBus>();
-            
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IMemoryCache, MemoryCache>();
+
+            services.AddScoped<IRequestHandler<RegisterOrderCommand, Unit>, OrderCommandHandler>();
+            services.AddScoped<INotificationHandler<OrderRegisteredEvent>, OrderEventHandler>();
+            services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
