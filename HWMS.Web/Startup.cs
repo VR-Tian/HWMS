@@ -43,11 +43,13 @@ namespace HWMS.Web
         {
             services.AddControllers();
             services.AddDbContext<OrderContext>();
+            services.AddDbContext<AccessContext>();
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
             services.AddAutoMapper(Assembly.Load("HWMS.Application"));
             services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderAppService, OrderAppService>();
+            // services.AddScoped<IUserAppService, UserAppService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IMemoryCache, MemoryCache>();
 

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace HWMS.Infrastructure.Migrations
+namespace HWMS.Infrastructure.Migrations.OrderContextMigration
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20201121084608_UpdateOrderOfAddress")]
-    partial class UpdateOrderOfAddress
+    [Migration("20201206113522_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

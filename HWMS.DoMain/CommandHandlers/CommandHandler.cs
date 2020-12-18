@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using HWMS.DoMain.Core.Bus;
 using HWMS.DoMain.Core.Commands;
+using HWMS.DoMain.Core.Notifications;
 using HWMS.DoMain.Interfaces;
 
 namespace HWMS.DoMain.CommandHandlers
@@ -48,11 +49,13 @@ namespace HWMS.DoMain.CommandHandlers
             List<string> errorInfo = new List<string>();
             foreach (var error in message.ValidationResult.Errors)
             {
-                errorInfo.Add(error.ErrorMessage);
+                //errorInfo.Add(error.ErrorMessage);
+                //将错误信息提交到事件总线，派发出去
+                _bus.RaiseEvent(new DomainNotification("", error.ErrorMessage));
 
             }
             //将错误信息收集
-            _cache.Set("ErrorData", errorInfo);
+            //_cache.Set("ErrorData", errorInfo);
         }
 
     }

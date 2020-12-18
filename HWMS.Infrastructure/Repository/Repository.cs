@@ -9,12 +9,12 @@ namespace HWMS.Infrastructure.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly OrderContext _OrderContext;
+        protected readonly DbContext _Context;
         protected readonly DbSet<TEntity> _DbSet;
-        public Repository(OrderContext OrderContext)
+        public Repository(DbContext context)
         {
-            this._OrderContext = OrderContext;
-            this._DbSet = this._OrderContext.Set<TEntity>();
+            this._Context = context;
+            this._DbSet = this._Context.Set<TEntity>();
         }
 
         public void Add(TEntity obj)
@@ -24,7 +24,7 @@ namespace HWMS.Infrastructure.Repository
 
         public void Dispose()
         {
-            this._OrderContext.Dispose();
+            this._Context.Dispose();
             GC.SuppressFinalize(this);
         }
 
@@ -45,7 +45,7 @@ namespace HWMS.Infrastructure.Repository
 
         public int SaveChanges()
         {
-            return this._OrderContext.SaveChanges();
+            return this._Context.SaveChanges();
         }
 
         public void Update(TEntity obj)

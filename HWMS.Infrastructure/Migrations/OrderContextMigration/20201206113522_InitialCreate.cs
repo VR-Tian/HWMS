@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace HWMS.Infrastructure.Migrations
+namespace HWMS.Infrastructure.Migrations.OrderContextMigration
 {
-    public partial class InitDatabase : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,11 @@ namespace HWMS.Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     OrderNumber = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
-                    OrderDate = table.Column<DateTime>(type: "Datetime", nullable: false)
+                    OrderDate = table.Column<DateTime>(type: "Datetime", nullable: false),
+                    Province = table.Column<string>(type: "varchar(50)", nullable: true),
+                    City = table.Column<string>(type: "varchar(50)", nullable: true),
+                    County = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Street = table.Column<string>(type: "varchar(50)", nullable: true)
                 },
                 constraints: table =>
                 {

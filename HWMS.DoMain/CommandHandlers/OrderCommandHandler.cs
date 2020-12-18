@@ -33,7 +33,8 @@ namespace HWMS.DoMain.CommandHandlers
             if (!message.IsValid())
             {
                 // 错误信息收集
-                NotifyValidationErrors(message);
+                this._Bus.RaiseEvent(new DomainNotification("", string.Join(";", message.ValidationResult.Errors)));
+                // NotifyValidationErrors(message);
                 return Task.FromResult(new Unit());
             }
 

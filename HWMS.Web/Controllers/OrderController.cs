@@ -14,10 +14,10 @@ namespace HWMS.Web.Controllers
     {
         private readonly IOrderAppService _OrderAppService;
         private readonly ILogger<WeatherForecastController> _logger;
-
         private readonly DomainNotificationHandler _Notification;
 
-        public OrderControlle(ILogger<WeatherForecastController> logger, IOrderAppService orderService, INotificationHandler<DomainNotification> notification)
+        public OrderControlle(ILogger<WeatherForecastController> logger,
+        IOrderAppService orderService, INotificationHandler<DomainNotification> notification)
         {
             this._logger = logger;
             this._OrderAppService = orderService;
@@ -38,6 +38,8 @@ namespace HWMS.Web.Controllers
             {
                 var infoMsg = _Notification.GetNotifications();
                 _Notification.Dispose();
+                return BadRequest(infoMsg);
+
             }
             return Ok();
         }

@@ -15,7 +15,7 @@ namespace HWMS.Infrastructure.Repository
 
         public Order GetOrderNumber(string orderNumber)
         {
-            return this._OrderContext.Orders.Where(t => t.OrderNumber == orderNumber).FirstOrDefault();
+            return this._DbSet.Where(t => t.OrderNumber == orderNumber).FirstOrDefault();
         }
     }
 }

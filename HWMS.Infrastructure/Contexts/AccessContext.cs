@@ -1,17 +1,18 @@
-﻿using System;
+using System;
 using HWMS.DoMain.Models;
+using HWMS.DoMain.Models.Access;
 using HWMS.Infrastructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace HWMS.Infrastructure.Contexts
 {
-    public class OrderContext : DbContext
+    public class AccessContext : DbContext
     {
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new OrderMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -2,6 +2,7 @@ using System;
 using AutoMapper;
 using HWMS.Application.ViewModels;
 using HWMS.DoMain.Models;
+using HWMS.DoMain.Models.Access;
 
 namespace HWMS.Application.AutoMapper
 {
@@ -12,6 +13,8 @@ namespace HWMS.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
+            CreateMap<User, UserViewModel>();
+
             CreateMap<Order, OrderViewModel>()
                 .ForMember(d => d.County, o => o.MapFrom(s => s.Address.County))
                 .ForMember(d => d.Province, o => o.MapFrom(s => s.Address.Province))

@@ -1,6 +1,7 @@
 using System;
 using HWMS.DoMain.Interfaces;
 using HWMS.Infrastructure.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace HWMS.Infrastructure
 {
@@ -10,10 +11,10 @@ namespace HWMS.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         //数据库上下文
-        private readonly OrderContext _context;
+        private readonly DbContext _context;
 
         //构造函数注入
-        public UnitOfWork(OrderContext context)
+        public UnitOfWork(DbContext context)
         {
             _context = context;
         }
