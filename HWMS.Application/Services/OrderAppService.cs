@@ -27,6 +27,13 @@ namespace HWMS.Application.Services
             this._Mapper = Mapper;
             this._UnitOfWork = uow;
         }
+
+        public OrderAppService(IOrderRepository IOrderRepository, IMapper Mapper, IMediatorHandler bus)
+        {
+            this._Bus = bus;
+            this._OrderRepository = IOrderRepository;
+            this._Mapper = Mapper;
+        }
         public void Dispose()
         {
             this._OrderRepository.Dispose();

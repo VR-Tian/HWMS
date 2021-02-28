@@ -33,6 +33,12 @@ namespace HWMS.DoMain.CommandHandlers
             _cache = cache;
         }
 
+         public CommandHandler(IMediatorHandler bus, IMemoryCache cache)
+        {
+            _bus = bus;
+            _cache = cache;
+        }
+
         //工作单元提交
         //如果有错误，下一步会在这里添加领域通知
         public bool Commit()

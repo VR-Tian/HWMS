@@ -50,12 +50,17 @@ namespace HWMS.Web
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderAppService, OrderAppService>();
             // services.AddScoped<IUserAppService, UserAppService>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            // services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IMemoryCache, MemoryCache>();
 
             services.AddScoped<IRequestHandler<RegisterOrderCommand, Unit>, OrderCommandHandler>();
             services.AddScoped<INotificationHandler<OrderRegisteredEvent>, OrderEventHandler>();
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
+
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo() { Title = "HWMS", Version = "v1" });
+            });
 
 
         }
@@ -77,6 +82,12 @@ namespace HWMS.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "HWMS");
             });
         }
     }

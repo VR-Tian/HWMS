@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <!--引用vue.js在线文件-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <span id="span1">123v11</span>
+    </div>
+</body>
+<script type="text/javascript">
+    var obj = new Object();
+    Object.defineProperties(obj, {
+        "name": {
+            value: "maotr",
+            writable: true,
+            enumerable: true,
+            configurable: true
+        }
+    });
+
+    $('#span1').text(obj.name);
+</script>
+
+</html>

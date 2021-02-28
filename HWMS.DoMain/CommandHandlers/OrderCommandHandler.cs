@@ -27,6 +27,13 @@ namespace HWMS.DoMain.CommandHandlers
             this._OrderRepository = orderRepository;
         }
 
+        public OrderCommandHandler(IOrderRepository orderRepository, IMediatorHandler bus, IMemoryCache cache) : base(bus, cache)
+        {
+            this._Cache = cache;
+            this._Bus = bus;
+            this._OrderRepository = orderRepository;
+        }
+
         public Task<Unit> Handle(RegisterOrderCommand message, CancellationToken cancellationToken)
         {
             // 命令验证
@@ -61,7 +68,7 @@ namespace HWMS.DoMain.CommandHandlers
             _OrderRepository.Add(orderRegister);
 
             // 统一提交
-            if (Commit())
+            if (this._OrderRepository.SaveChanges() > 0)//Commit()
             {
                 // 提交成功后，这里需要发布领域事件
                 // 比如欢迎用户注册邮件呀，短信呀等

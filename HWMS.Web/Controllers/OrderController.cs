@@ -10,13 +10,13 @@ namespace HWMS.Web.Controllers
 {
     [ApiController]
     [Route("api/Order")]
-    public class OrderControlle : ControllerBase
+    public class OrderController : ControllerBase
     {
         private readonly IOrderAppService _OrderAppService;
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly DomainNotificationHandler _Notification;
 
-        public OrderControlle(ILogger<WeatherForecastController> logger,
+        public OrderController(ILogger<WeatherForecastController> logger,
         IOrderAppService orderService, INotificationHandler<DomainNotification> notification)
         {
             this._logger = logger;

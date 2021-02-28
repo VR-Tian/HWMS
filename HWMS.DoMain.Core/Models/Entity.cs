@@ -7,7 +7,7 @@ namespace HWMS.DoMain.Core.Models
         /// <summary>
         /// 唯一标识
         /// </summary>
-        public Guid Id { get; protected set; }
+        public virtual Guid Id { get; protected set; }
 
         /// <summary>
         /// 重写方法 相等运算

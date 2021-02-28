@@ -11,10 +11,10 @@ namespace HWMS.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         //数据库上下文
-        private readonly DbContext _context;
+        private readonly OrderContext _context;
 
         //构造函数注入
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(OrderContext context)
         {
             _context = context;
         }

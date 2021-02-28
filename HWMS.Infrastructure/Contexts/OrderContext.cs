@@ -20,7 +20,7 @@ namespace HWMS.Infrastructure.Contexts
         {
             //TODO 通过配置文件读取。
             // 定义要使用的数据库
-            optionsBuilder.UseSqlServer("server=172.23.36.125;uid=sa;pwd=Ljt1994..;database=HWMSApp");
+            optionsBuilder.UseSqlServer("server=172.18.120.52;uid=sa;pwd=Ljt1994..;database=HWMSApp");
         }
     }
 }

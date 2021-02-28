@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\vrtian\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\vrtian\\.nuget\\packages"
+    ]
+  }
+}

@@ -72,3 +72,9 @@ D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\HWMS.DoMain.Core.pdb
 D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\MediatR.dll
 D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Plan.Json
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.MvcApplicationPartsAssemblyInfo.cs

@@ -1,0 +1,2 @@
+--关于迁移回退上个映射命令
+dotnet-ef.exe Migrations remove --context OrderContext --project ..\HWMS.Infrastructure\
