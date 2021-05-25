@@ -68,7 +68,7 @@ namespace HWMS.DoMain.CommandHandlers
             _OrderRepository.Add(orderRegister);
 
             // 统一提交
-            if (this._OrderRepository.SaveChanges() > 0)//Commit()
+            if (this._OrderRepository.SaveChangesAsync().Result > 0)//Commit()
             {
                 // 提交成功后，这里需要发布领域事件
                 // 比如欢迎用户注册邮件呀，短信呀等

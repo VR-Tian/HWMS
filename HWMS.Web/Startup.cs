@@ -41,8 +41,9 @@ namespace HWMS.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddOptions();
             services.AddControllers();
-            services.AddDbContext<OrderContext>();
+            services.AddDbContext<HWMSContext>();
             services.AddDbContext<AccessContext>();
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
             services.AddAutoMapper(Assembly.Load("HWMS.Application"));
@@ -62,7 +63,7 @@ namespace HWMS.Web
                 s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo() { Title = "HWMS", Version = "v1" });
             });
 
-
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

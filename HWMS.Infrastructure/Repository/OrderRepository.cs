@@ -8,7 +8,7 @@ namespace HWMS.Infrastructure.Repository
 {
     public class OrderRepository : Repository<Order>, IOrderRepository
     {
-        public OrderRepository(OrderContext OrderContext) : base(OrderContext)
+        public OrderRepository(HWMSContext OrderContext) : base(OrderContext)
         {
 
         }

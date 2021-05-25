@@ -1,2 +1,8 @@
+Windows PowerShell 使用 CLI
 --关于迁移回退上个映射命令
 dotnet-ef.exe Migrations remove --context OrderContext --project ..\HWMS.Infrastructure\
+
+--关于EF的迁移命令
+dotnet-ef.exe migrations add InitialOrder -p ..\HWMS.Infrastructure\ -o ..\HWMS.Infrastructure\Migrations\OrderMigration\ --context HWMSContext
+
+--关于EF的模型映射命令（VS Code中必须具有启动类型项目的路径为CLI的起点，否则会提示startup project using）

@@ -1,0 +1,14 @@
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.Infrastructure.deps.json
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.Infrastructure.dll
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.Infrastructure.pdb
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.DoMain.Core.dll
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.DoMain.dll
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.DoMain.pdb
+D:\IDE\HWMSApp\HWMS.Infrastructure\bin\Release\netstandard2.0\HWMS.DoMain.Core.pdb
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.csprojAssemblyReference.cache
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.AssemblyInfoInputs.cache
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.AssemblyInfo.cs
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.csproj.CoreCompileInputs.cache
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.csproj.CopyComplete
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.dll
+D:\IDE\HWMSApp\HWMS.Infrastructure\obj\Release\netstandard2.0\HWMS.Infrastructure.pdb

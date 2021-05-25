@@ -1,9 +1,15 @@
 {
-    "计划":[{
-        "日期":"2021-02-28",
-        "内容":"关于RESTFulAPI的学习",
-        "总结":""
-    },{
-
-    }]
+  "计划": [
+    {
+      "日期": "2021-02-28",
+      "内容": "关于RESTFulAPI的学习",
+      "总结": ""
+    },
+    {
+      "日期": "2021-02-28",
+      "内容": "关于Docker命令的学习",
+      "run":docker run -p 58912:58912 -e "ASPNETCORE_URLS=http://+:58912" -it --rm sga
+      "build": docker build -f "D:\IDE\HWMSApp\published\Dockerfile" --force-rm -t hwmsweb:Release --target base  --label "com.microsoft.created-by=visual-studio" --label "com.microsoft.visual-studio.project-name=HWMS.Web" "D:\IDE\HWMSApp",
+    }
+  ]
 }

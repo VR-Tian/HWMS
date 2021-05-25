@@ -1,0 +1,12 @@
+D:\IDE\HWMSApp\HWMS.DoMain\bin\Release\netstandard2.0\HWMS.DoMain.deps.json
+D:\IDE\HWMSApp\HWMS.DoMain\bin\Release\netstandard2.0\HWMS.DoMain.dll
+D:\IDE\HWMSApp\HWMS.DoMain\bin\Release\netstandard2.0\HWMS.DoMain.pdb
+D:\IDE\HWMSApp\HWMS.DoMain\bin\Release\netstandard2.0\HWMS.DoMain.Core.dll
+D:\IDE\HWMSApp\HWMS.DoMain\bin\Release\netstandard2.0\HWMS.DoMain.Core.pdb
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.csprojAssemblyReference.cache
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.AssemblyInfoInputs.cache
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.AssemblyInfo.cs
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.csproj.CoreCompileInputs.cache
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.csproj.CopyComplete
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.dll
+D:\IDE\HWMSApp\HWMS.DoMain\obj\Release\netstandard2.0\HWMS.DoMain.pdb

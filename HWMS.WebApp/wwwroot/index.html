@@ -7,25 +7,316 @@
     <!--引用vue.js在线文件-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="Student.js"></script>
+    <script src="main-Student.js"></script>
+
 </head>
 
 <body>
-    <div>
-        <span id="span1">123v11</span>
+    <div id="app1" v-show="isshow">
+        <ul v-for="item in listSearch">
+            <li>
+                {{item.name}}
+            </li>
+        </ul>
+        <span>{{spanText.split('').reverse()}}</span>
+        <span>{{reversedMessage}}</span>
+        <input id="addText" type="text" v-on:dblclick="addData" placeholder="双击添加" disabled="false" />
+        <input id="addText1" type="text" @keydown.enter="addData" v-model="task.name" placeholder="回车添加" />
+
     </div>
+    <div id="app2">
+        <ul v-for="item in task.list">
+            <li v-bind:class="item.deleted?'deleted':''" v-bind:style="item.deleted?'':styleObject">
+                {{item.name}}
+            </li>
+        </ul>
+        <ul v-for="item in task.list">
+            <li v-bind:class="testclass">
+                {{item.name}}
+            </li>
+        </ul>
+
+    </div>
+    <div id="app3">
+        <footer-vue></footer-vue>
+    </div>
+    <div id=app4>
+        <template id="temApp">
+            <div>
+                <div id="nav">
+                    <router-link to="/">Home</router-link> |
+                    <router-link to="/about">Form</router-link> |
+                    <router-link to="/Vuex">Vuex</router-link>
+                </div>
+                <router-view />
+            </div>
+        </template>
+    </div>
+    <div id="dynamic-component-demo" class="demo">
+        <button v-for="tab in tabs" v-bind:key="tab" v-bind:class="['tab-button', { active: currentTab === tab }]"
+            v-on:click="currentTab = tab">{{ tab }}</button>
+        <component v-bind:is="currentTabComponent" class="tab"></component>
+    </div>
+
 </body>
-<script type="text/javascript">
-    var obj = new Object();
-    Object.defineProperties(obj, {
-        "name": {
-            value: "maotr",
-            writable: true,
-            enumerable: true,
-            configurable: true
+<script>
+    Vue.component('footer-vue1', {
+        template: '#temApp',
+    })
+    Vue.component('tab-home', {
+        template: '<div>Home component</div>' //组件1，也就是页面1
+    })
+    Vue.component('tab-posts', {
+        template: '<div>Posts component</div>' //组件2，页面2
+    })
+    Vue.component('tab-archive', {
+        template: '<div>Archive component</div>' //组件3，页面3
+    })
+    Vue.component('footer-vue', {
+        template: `
+             <div id="footer-vue">
+                 <p>2018 <a href="#">LZ's Blog</a> - Hosted by <a href="#" style="font-weight: bold">Coding Pages</a></p>
+                 <p>
+                     <a href="#">京ICP备00000000号{{author}}</a>
+                 </p>
+                 {{message}}
+             </div>
+             `,
+        data: function () {
+            return {
+                message: 'weclome to my home',
+                author:'3333',
+            }
         }
     });
 
-    $('#span1').text(obj.name);
+    let vm = new Vue({
+        el: '#app3'
+    });
+    new Vue({
+        el: "#app4"
+    });
+    new Vue({
+        el: '#dynamic-component-demo',
+        data: {
+            currentTab: 'Home',//当前banner名称
+            tabs: ['Home', 'Posts', 'Archive']//定义三个banner
+        },
+        computed: {//计算属性，实时监控获取当然banner的值，并返回到页面
+            currentTabComponent: function () {
+                return 'tab-' + this.currentTab.toLowerCase()//组件名称拼串，一定要和上边的三个组件名对应
+            }
+        }
+    })
+</script>
+<script type="Vue的生命周期">
+    let vm = new Vue({
+        el: '#app2',
+        data: {
+
+        },
+        beforeCreate: function () {
+            //创建Vue示例之前
+        },
+        Created: function () {
+            //创建Vue实例后，但el没有获取容器
+        },
+        beforeMount: function () {
+            //Vue已实例全部属性,页面还没渲染
+        },
+        Mounted: function () {
+            //挂在完毕，页面渲染完成后
+        },
+        beforeUpdate: function () {
+            //更新Data数据之前触发
+        },
+        Updated: function () {
+            //更新Data数据后触发
+        },
+        beforeDestroy: function () {
+            //销毁当前Vue示例前触发
+        },
+        destroyed: function () {
+            //销毁当前Vue示例后触发
+        }
+    });
+</script>
+<script type="Vue-class-style">
+    var vm = new Vue(
+        {
+            el: '#app2',//容器  
+            data: {
+                author: "老张的哲学",
+                testclass: ['testclass', 'deleted'],
+                styleObject: {
+                    color: 'blue',
+                    fontSize: '13px'
+                },
+                task: {
+                    name: '',//内容为空 id: 100, date: " Just Now ", finished: false, deleted: false }, 
+                    list: [ //假数据 
+                        { name: " Vue前篇：ES6初体验 & 模块化编程", id: 9585766, date: "2018年9月5日", finished: false, deleted: true },//我们在这里定义一个删除的true 
+                        { name: "Vue前篇：JS对象&字面量&this", id: 9580807, date: "2018年9月4日", finished: false, deleted: false },
+                        { name: " VUE 计划书 & 我的前后端开发简史", id: 9577805, date: "2018年9月3日", finished: false, deleted: false },
+                        { name: " DTOs 对象映射使用，项目部署Windows+Linux完整版", id: 3800, date: "2018年9月1日", finished: false, deleted: false },
+                        { name: " 三种跨域方式比较，DTOs(数据传输对象)初探", id: 4200, date: "2018年8月31日", finished: false, deleted: false },
+                        { name: "VUE 计划书 & 我的前后端开发简史", id: 3200, date: "2018年9月2日", finished: false, deleted: false },
+                        { name: "VUE 实战预告", id: 3200, date: "2018年9月12日", finished: false, deleted: false }],
+
+                },
+            }
+        });
+</script>
+<script type="Vue的JS操作">
+    let vm = new Vue({
+        el: '#app1',
+        data: {
+            isshow: true,
+            list: [{ name: "Vue前篇：ES6初体验 & 模块化编程" }, { name: " 模块化编程" }, { name: " jAVA" }],
+            spanText: '123',
+            task: {}
+        },
+        methods: {
+            addData: function (ethat) {
+                this.list = this.list.reverse();
+                // this.list.push({ name: $('#addText').val() });
+                this.list.push(this.task);
+                this.list = this.list.reverse();
+                this.task = {};
+            }
+        }, computed: {
+            reversedMessage() {
+                return this.spanText.split('').reverse().join('')
+            },
+            listSearch: function () {
+                //为什么要存这个this呢，因为filter过滤器会改变this的指向
+                let that = this;
+                return this.list.filter(function (item) {
+                    //简单的 判断文章name是否包含 input中的值，因为双向绑定，所以也就是 task.name
+                    if (that.task.name == "" || that.task.name == undefined) {
+                        return true;
+                    }
+                    return item.name.indexOf(that.task.name) >= 0;
+                });
+            }
+        },
+        // watch: {
+        //     task: {
+        //         handler: function (eTask) {
+        //             console.log(`task被修改了${eTask.name}`);
+        //         }
+        //     }
+        // }
+    });
+</script>
+<script type="this-字面量">
+
+    var myApp = {
+        data: {
+            name: 'lisan',
+            age: 12,
+            obj: null,
+        },
+        show: function () {
+            var that = this;
+            alert(this.data.name);
+            $('#span1').click(function () {
+                alert(this);
+                alert(that.data.age)
+            });
+        },
+        show1: function () {
+            $('#span1').mouseleave(() => {
+                alert($('#span1').text());
+                alert(this.data.name + this.data.age);
+            })
+        }
+    }
+    myApp.show();
+    myApp.show1();
+
+
+
+    var name = 'window pro name';
+    function foo2() {
+        this.foo2name = 'foo2';
+        console.log(this);
+        // return { a: 2 };
+    };
+    function foo() {
+        alert(this.name);
+        var f2 = new foo2();
+        console.log(f2.foo2name);
+        console.log(f2);
+        console.log(this);
+        return { a: 1 };
+    };
+    var f = foo();
+    console.log(f);
+    //var f = new foo();
+    //console.log(f);
+</script>
+<script type="函数调用方式">
+    // var obj = new Object();
+    // Object.defineProperties(obj, {
+    //     "name": {
+    //         value: "maotr",
+    //         writable: true,
+    //         enumerable: true,
+    //         configurable: true
+    //     }
+    // });
+
+    //$('#span1').text(obj.name);
+
+
+    fun2();
+
+    var fun1 = function () {
+        alert("声明一个函数表达式并赋值给变量fun1，先声明后使用");
+        //通过这样的方式声明函数，只能通过赋值变量来调用
+    };
+    fun1();
+
+
+    function fun2() {
+        alert("声明一个函数f2表达式,在声明函数体前已通过函数名称调用");
+    };
+    //构造函数的调用形式
+    var blog = new Blog('mylove', 'hello');
+    blog.read();
+
+    function Blog(title, font) {
+        this.title = title,
+            this.font = font,
+            this.read = function () {
+                alert(this.title + this.font);
+            }
+    };
+
+    //普通函数的调用形式
+    blog1(1, 2);
+    window.blog1read();
+
+    function blog1(title, font) {
+        this.title = title,
+            this.font = font,
+            this.blog1read = function () {
+                alert(1111);
+            }
+    };
+
 </script>
 
 </html>
+<style>
+    .deleted {
+        color: red;
+        text-decoration: line-through;
+    }
+
+    .testclass {
+        font-size: x-large;
+    }
+</style>

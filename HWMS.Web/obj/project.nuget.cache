@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X9uPZJOqxppCYi8E5kNJLtPIj7PxQVtOxIR2YvAVdzMPZCZyB54P5XSr05l6jNsDlYnkxqBFNa00MvRUvjX0jg==",
+  "dgSpecHash": "fGLi6fYUlhPZA7vW1qihbH4sOg7oV18BLvCAQ3vHdomeqcpjESSt7XPESO4YGVSaAqWQCSUlKzTsVIc7pyeWXQ==",
   "success": true,
   "projectFilePath": "D:\\IDE\\HWMSApp\\HWMS.Web\\HWMS.Web.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,7 @@
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Users\\vrtian\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",

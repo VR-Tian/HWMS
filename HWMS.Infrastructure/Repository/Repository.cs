@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using HWMS.DoMain.Interfaces;
 using HWMS.DoMain.Models;
 using HWMS.Infrastructure.Contexts;
@@ -46,6 +47,11 @@ namespace HWMS.Infrastructure.Repository
         public int SaveChanges()
         {
             return this._Context.SaveChanges();
+        }
+
+        public Task<int> SaveChangesAsync()
+        {
+            return this._Context.SaveChangesAsync();
         }
 
         public void Update(TEntity obj)

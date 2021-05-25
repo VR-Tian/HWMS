@@ -9,6 +9,8 @@ namespace HWMS.DoMain.EventHandlers
 {
     public class OrderEventHandler : INotificationHandler<OrderRegisteredEvent>
     {
+        public OrderRegisteredEvent orderRegistered {get; private set;}
+
         /// <summary>
         /// 新增的事件处理
         /// </summary>
@@ -17,7 +19,7 @@ namespace HWMS.DoMain.EventHandlers
         /// <returns></returns>
         public Task Handle(OrderRegisteredEvent notification, CancellationToken cancellationToken)
         {
-
+            orderRegistered = notification;
             return Task.CompletedTask;
         }
 

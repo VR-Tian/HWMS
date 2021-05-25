@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using HWMS.Application.Interfaces;
@@ -81,6 +82,17 @@ namespace HWMS.Application.Services
         public void Update(OrderViewModel OrderViewModel)
         {
             throw new NotImplementedException();
+        }
+
+        void IOrderAppService.Register(OrderViewModel OrderViewModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RegisterAsyn(OrderViewModel OrderViewModel)
+        {
+            var registerCommand = this._Mapper.Map<RegisterOrderCommand>(OrderViewModel);
+            return this._Bus.SendCommand(registerCommand);
         }
     }
 }

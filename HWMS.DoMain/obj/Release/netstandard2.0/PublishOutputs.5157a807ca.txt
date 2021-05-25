@@ -1,0 +1,7 @@
+D:\IDE\HWMSApp\published\HWMS.DoMain.dll
+D:\IDE\HWMSApp\published\HWMS.DoMain.deps.json
+D:\IDE\HWMSApp\published\HWMS.DoMain.pdb
+D:\IDE\HWMSApp\published\FluentValidation.dll
+D:\IDE\HWMSApp\published\MediatR.dll
+D:\IDE\HWMSApp\published\HWMS.DoMain.Core.dll
+D:\IDE\HWMSApp\published\HWMS.DoMain.Core.pdb

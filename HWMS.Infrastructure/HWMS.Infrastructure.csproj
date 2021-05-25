@@ -19,4 +19,8 @@
     <ProjectReference Include="..\HWMS.DoMain.Core\HWMS.DoMain.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\OrderMigration\" />
+  </ItemGroup>
+
 </Project>

@@ -1,9 +1,10 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace HWMS.DoMain.Interfaces
 {
-    public interface IRepository<TEntity>:IDisposable where TEntity : class
+    public interface IRepository<TEntity> : IDisposable where TEntity : class
     {
         /// <summary>
         /// 添加
@@ -36,5 +37,7 @@ namespace HWMS.DoMain.Interfaces
         /// </summary>
         /// <returns></returns>
         int SaveChanges();
+
+        Task<int> SaveChangesAsync();
     }
 }

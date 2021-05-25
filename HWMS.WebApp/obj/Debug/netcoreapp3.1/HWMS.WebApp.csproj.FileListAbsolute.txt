@@ -1,6 +1,5 @@
 D:\IDE\HWMSApp\HWMS.WebApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\IDE\HWMSApp\HWMS.WebApp\bin\Debug\netcoreapp3.1\appsettings.json
-D:\IDE\HWMSApp\HWMS.WebApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\IDE\HWMSApp\HWMS.WebApp\bin\Debug\netcoreapp3.1\HWMS.WebApp.exe
 D:\IDE\HWMSApp\HWMS.WebApp\bin\Debug\netcoreapp3.1\HWMS.WebApp.deps.json
 D:\IDE\HWMSApp\HWMS.WebApp\bin\Debug\netcoreapp3.1\HWMS.WebApp.runtimeconfig.json
@@ -18,3 +17,4 @@ D:\IDE\HWMSApp\HWMS.WebApp\obj\Debug\netcoreapp3.1\staticwebassets\HWMS.WebApp.S
 D:\IDE\HWMSApp\HWMS.WebApp\obj\Debug\netcoreapp3.1\HWMS.WebApp.dll
 D:\IDE\HWMSApp\HWMS.WebApp\obj\Debug\netcoreapp3.1\HWMS.WebApp.pdb
 D:\IDE\HWMSApp\HWMS.WebApp\obj\Debug\netcoreapp3.1\HWMS.WebApp.genruntimeconfig.cache
+D:\IDE\HWMSApp\HWMS.WebApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\HWMS.WebApp.styles.css
