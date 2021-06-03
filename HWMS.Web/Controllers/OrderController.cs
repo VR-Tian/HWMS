@@ -5,12 +5,16 @@ using HWMS.Application.ViewModels;
 using HWMS.DoMain.Core.Notifications;
 using HWMS.DoMain.EventHandlers;
 using HWMS.DoMain.Events;
+using HWMS.Web.Extension;
+using HWMS.Web.Filter;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace HWMS.Web.Controllers
 {
+    [IsAuthorized]
     [ApiController]
     [Route("api/Order")]
     public class OrderController : ControllerBase
@@ -31,14 +35,19 @@ namespace HWMS.Web.Controllers
 
         }
 
+        
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(this._OrderAppService.GetAll());
+            if (this.HavePermission(""))
+            {
+
+            }
+            return Ok();
         }
 
         [HttpGet]
-        [Route("/id", Name = "Get")]
+        [Route("id", Name = nameof(Get))]
         public IActionResult Get(Guid id)
         {
             return Ok(this._OrderAppService.GetById(id));
@@ -55,7 +64,7 @@ namespace HWMS.Web.Controllers
                 return BadRequest(infoMsg);
             }
             //this._OrderRegiestHandler.orderRegisteredEvent;
-            return CreatedAtRoute("Get", new { id = this._OrderRegiestHandler.orderRegistered.Id });
+            return CreatedAtRoute(nameof(Get), new { id = this._OrderRegiestHandler.orderRegistered.Id });
         }
     }
 }

@@ -11,27 +11,34 @@ namespace HWMS.Application.Services
 {
     public class UserAppService : IUserAppService
     {
-        private readonly IUserRepository _Repository;
+        // private readonly IUserRepository _Repository;
         private readonly IMapper _Mapper;
-        public UserAppService(IUserRepository repository, IMapper mapper)
+        public UserAppService(IMapper mapper)
         {
-            this._Repository = repository;
+            // this._Repository = repository;
             this._Mapper = mapper;
         }
 
         public void Dispose()
         {
-            this._Repository.Dispose();
+            //this._Repository.Dispose();
         }
 
         public IEnumerable<UserViewModel> GetAll()
         {
-            return this._Repository.GetAll().ProjectTo<UserViewModel>(_Mapper.ConfigurationProvider).ToList();
+            return null;
+            //return this._Repository.GetAll().ProjectTo<UserViewModel>(_Mapper.ConfigurationProvider).ToList();
         }
 
         public UserViewModel GetById(Guid id)
         {
             throw new NotImplementedException();
+        }
+
+        public bool IsValid(LoginRequestDto req)
+        {
+            //Todo:验证身份信息
+            return true;
         }
 
         public void Register(UserViewModel userViewModel)

@@ -11,5 +11,7 @@ namespace HWMS.Application.Interfaces
         UserViewModel GetById(Guid id);
         void Update(UserViewModel userViewModel);
         void Remove(Guid id);
+
+        bool IsValid(LoginRequestDto req);
     }
 }

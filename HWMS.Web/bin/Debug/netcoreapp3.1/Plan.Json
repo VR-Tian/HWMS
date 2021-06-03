@@ -6,10 +6,26 @@
       "总结": ""
     },
     {
-      "日期": "2021-02-28",
-      "内容": "关于Docker命令的学习",
-      "run":docker run -p 58912:58912 -e "ASPNETCORE_URLS=http://+:58912" -it --rm sga
-      "build": docker build -f "D:\IDE\HWMSApp\published\Dockerfile" --force-rm -t hwmsweb:Release --target base  --label "com.microsoft.created-by=visual-studio" --label "com.microsoft.visual-studio.project-name=HWMS.Web" "D:\IDE\HWMSApp",
+      "日期": "2021-05-25",
+      "内容": "关于ASP.NETCore Docker命令的学习",
+      "dockerfile": "",
+      "run": "docker run -it(在线运行) --rm(停止即销毁容器) -d(后台运行) -p 5000:80 --name hwmsapp hwms.web:Release",
+      "build": "docker.exe build -t hwms.web:Release .",
+      "publish": "dotnet publish -c Release -o published"
+    },
+    {
+      "日期": "2021-05-26",
+      "内容": "关于MSSQL Docker命令的学习",
+      "url": "https://docs.microsoft.com/zh-cn/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-powershell",
+      "run":docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<Tian@Ljt1994..>" -p 1433: 1433 --name hwms-mssql -h hwms-mssql  -d mcr.microsoft.com/mssql/server: 2019-latest,
+      "在运行的容器内部启动交互式 Bash Shell": "docker exec -it hwms-mssql "bash"",
+      "在容器内部使用 sqlcmd 进行本地连接":/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Passw0rd"
+    },
+    {
+      "日期": "2021-06-02",
+      "内容": "关JWT的身份验证和授权的学习",
+      "Url": "https://blog.csdn.net/mzl87/article/details/103128443/",
+      "步骤":"1、身份验证的方案配置；2、关于Token生成逻辑；3、基于角色的身份授权"
     }
   ]
 }
