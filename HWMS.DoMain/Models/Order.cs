@@ -7,12 +7,13 @@ namespace HWMS.DoMain.Models
     /// <summary>
     /// 订单实体
     /// </summary>
-    public class Order : Entity
+    public class Order : Entity<int>
     {
-        public Order(Guid userID, string ordernumber, DateTime createDate)
+        public Guid OrderID { get; }
+        public Order(Guid orderID, string ordernumber, DateTime createDate)
         {
             this._OrderDate = createDate;
-            this.Id = userID;
+            this.OrderID = orderID;
             this.OrderNumber = ordernumber;
         }
 

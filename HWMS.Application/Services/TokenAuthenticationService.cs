@@ -1,5 +1,6 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using HWMS.Application.Interfaces;
@@ -21,15 +22,17 @@ namespace HWMS.Application.Services
         }
         public bool IsAuthenticated(LoginRequestDto request, out string token)
         {
+            var userinfo = _UserService.GetByInfo(request);
             token = string.Empty;
-            if (!_UserService.IsValid(request))
+            if (userinfo == null)
                 return false;
             //用户身份授权
+            var roleOfUser = _UserService.GetRoleOfUser(userinfo);
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name,request.Username),
-                new Claim("ACCESS_LEVEL","ADMIN"),
-                new Claim("USER_ID", Guid.NewGuid().ToString()),
+                new Claim("ACCESS_ROLECODE",string.Join("|",roleOfUser.Select(t=>t.RoleCode))),
+                new Claim("USER_ID", userinfo.Id.ToString()),
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_TokenManagement.Secret));//使用配置密钥进行加密
 

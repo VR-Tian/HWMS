@@ -2,12 +2,12 @@ using System;
 
 namespace HWMS.DoMain.Core.Models
 {
-    public class Entity
+    public class Entity<T>
     {
         /// <summary>
         /// 唯一标识
         /// </summary>
-        public virtual Guid Id { get; protected set; }
+        public virtual T Id { get; protected set; }
 
         /// <summary>
         /// 重写方法 相等运算
@@ -16,7 +16,7 @@ namespace HWMS.DoMain.Core.Models
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            var compareTo = obj as Entity;
+            var compareTo = obj as Entity<T>;
 
             if (ReferenceEquals(this, compareTo)) return true;
             if (ReferenceEquals(null, compareTo)) return false;
@@ -30,7 +30,7 @@ namespace HWMS.DoMain.Core.Models
         /// <param name="a">领域实体a</param>
         /// <param name="b">领域实体b</param>
         /// <returns></returns>
-        public static bool operator ==(Entity a, Entity b)
+        public static bool operator ==(Entity<T> a, Entity<T> b)
         {
             if (ReferenceEquals(a, null) && ReferenceEquals(b, null))
                 return true;
@@ -47,7 +47,7 @@ namespace HWMS.DoMain.Core.Models
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static bool operator !=(Entity a, Entity b)
+        public static bool operator !=(Entity<T> a, Entity<T> b)
         {
             return !(a == b);
         }

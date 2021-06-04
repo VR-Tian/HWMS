@@ -56,7 +56,7 @@ namespace HWMS.Web
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
             services.AddAutoMapper(Assembly.Load("HWMS.Application"));
             services.AddScoped<IMediatorHandler, InMemoryBus>();
-            // services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderAppService, OrderAppService>();
             services.AddScoped<IUserAppService, UserAppService>();

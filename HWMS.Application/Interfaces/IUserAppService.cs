@@ -8,10 +8,12 @@ namespace HWMS.Application.Interfaces
     {
         void Register(UserViewModel userViewModel);
         IEnumerable<UserViewModel> GetAll();
-        UserViewModel GetById(Guid id);
+        UserViewModel GetByInfo(LoginRequestDto req);
         void Update(UserViewModel userViewModel);
         void Remove(Guid id);
+        List<NavigationMenuViewModel> GetRolePermissionOfUser(int userid);
 
+        List<RoleViewModel> GetRoleOfUser(UserViewModel user);
         bool IsValid(LoginRequestDto req);
     }
 }

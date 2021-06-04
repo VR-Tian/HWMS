@@ -39,10 +39,6 @@ namespace HWMS.Web.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            if (this.HavePermission(""))
-            {
-
-            }
             return Ok();
         }
 

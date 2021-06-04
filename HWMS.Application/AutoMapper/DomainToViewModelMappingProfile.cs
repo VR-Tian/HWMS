@@ -15,6 +15,10 @@ namespace HWMS.Application.AutoMapper
         {
             CreateMap<User, UserViewModel>();
 
+            CreateMap<Role, RoleViewModel>();
+
+            CreateMap<NavigationMenu, NavigationMenuViewModel>();
+
             CreateMap<Order, OrderViewModel>()
                 .ForMember(d => d.County, o => o.MapFrom(s => s.Address.County))
                 .ForMember(d => d.Province, o => o.MapFrom(s => s.Address.Province))

@@ -11,11 +11,11 @@ namespace HWMS.Application.Services
 {
     public class UserAppService : IUserAppService
     {
-        // private readonly IUserRepository _Repository;
+        private readonly IUserRepository _Repository;
         private readonly IMapper _Mapper;
-        public UserAppService(IMapper mapper)
+        public UserAppService(IUserRepository repository,IMapper mapper)
         {
-            // this._Repository = repository;
+            this._Repository = repository;
             this._Mapper = mapper;
         }
 
@@ -30,15 +30,26 @@ namespace HWMS.Application.Services
             //return this._Repository.GetAll().ProjectTo<UserViewModel>(_Mapper.ConfigurationProvider).ToList();
         }
 
-        public UserViewModel GetById(Guid id)
+        public UserViewModel GetByInfo(LoginRequestDto req)
         {
-            throw new NotImplementedException();
+            return this._Repository.GetAll().Where(t => t.UserName == req.Username && t.Passwork == req.Password).ProjectTo<UserViewModel>(_Mapper.ConfigurationProvider).FirstOrDefault();
         }
+
+        public List<NavigationMenuViewModel> GetRolePermissionOfUser(int userid)
+        {
+            return _Repository.GetRolePermissionOfUser(userid).ProjectTo<NavigationMenuViewModel>(_Mapper.ConfigurationProvider).ToList();
+        }
+
+        public List<RoleViewModel> GetRoleOfUser(UserViewModel user)
+        {
+            return _Repository.GetRoleOfUser(user.Id).ProjectTo<RoleViewModel>(_Mapper.ConfigurationProvider).ToList();
+        }
+
+
 
         public bool IsValid(LoginRequestDto req)
         {
-            //Todo:验证身份信息
-            return true;
+            return false;
         }
 
         public void Register(UserViewModel userViewModel)

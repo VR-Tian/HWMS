@@ -2,22 +2,37 @@
 using System.Linq;
 using System.Net;
 using System.Security.Claims;
+using HWMS.Application.Interfaces;
 using HWMS.Web.Extension;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace HWMS.Web.Filter
 {
 
-    public class IsAuthorized : ActionFilterAttribute
+    public class IsAuthorizedAttribute : ActionFilterAttribute
     {
+
+        private IUserAppService _UserAppService;
+
         public override void OnActionExecuting(ActionExecutingContext context)
         {
+            _UserAppService = context.HttpContext.RequestServices.GetService<IUserAppService>();
+
+
             var isauthenticated = context.HttpContext.User.Identity.IsAuthenticated;
             var claimsIndentity = context.HttpContext.User.Identity as ClaimsIdentity;
-            if (!isauthenticated)
+            var clima = claimsIndentity.Claims.Where(t => t.Type == "USER_ID").FirstOrDefault();
+            var getuserPerissioninfo = _UserAppService.GetRolePermissionOfUser(int.Parse(clima.Value));
+
+            var allpermissinfo = getuserPerissioninfo.Select(t => (t.ControllerName + "/" + t.ActionName).ToUpper());
+
+            var accessRouteName = context.RouteData.Values["controller"].ToString() + "/" + context.RouteData.Values["action"].ToString();
+            if (!isauthenticated || !allpermissinfo.Contains(accessRouteName.ToUpper()))
             {
                 if (context.HttpContext.Request.IsAjaxRequest())
                 {
@@ -29,7 +44,6 @@ namespace HWMS.Web.Filter
                     context.Result = new RedirectResult("~/NoPermission.html");
                 }
             }
-            
             base.OnActionExecuting(context);
         }
 

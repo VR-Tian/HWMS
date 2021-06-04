@@ -74,7 +74,7 @@ namespace HWMS.DoMain.CommandHandlers
                 // 比如欢迎用户注册邮件呀，短信呀等
 
                 // waiting....
-                this._Bus.RaiseEvent(new OrderRegisteredEvent(orderRegister.Id, orderRegister.OrderNumber));
+                this._Bus.RaiseEvent(new OrderRegisteredEvent(orderRegister.OrderID, orderRegister.OrderNumber));
             }
 
             return Task.FromResult(new Unit());
