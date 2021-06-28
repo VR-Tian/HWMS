@@ -13,7 +13,10 @@ using Microsoft.Extensions.Hosting;
 
 namespace HWMS.Web.Filter
 {
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// 弃用：改用自定义中间件来进行身份授权
     public class IsAuthorizedAttribute : ActionFilterAttribute
     {
 

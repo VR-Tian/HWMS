@@ -9,9 +9,9 @@
       "日期": "2021-05-25",
       "内容": "关于ASP.NETCore Docker命令的学习",
       "dockerfile": "",
-      "run": "docker run -it(在线运行) --rm(停止即销毁容器) -d(后台运行) -p 5000:80 --name hwmsapp hwms.web:Release",
-      "build": "docker.exe build -t hwms.web:Release .",
-      "publish": "dotnet publish -c Release -o published"
+      "3.run": "docker run -it(在线运行) --rm(停止即销毁容器) -d(后台运行) -p 5000:80 --name hwmsapp hwms.web:Release",
+      "2.build": "docker.exe build -t hwms.web:Release ."(定位发布文件夹内使用该命令),
+      "1.publish": "dotnet publish -c Release -o published"
     },
     {
       "日期": "2021-05-26",

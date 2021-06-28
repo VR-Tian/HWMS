@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using HWMS.Application.Interfaces;
 using HWMS.Application.ViewModels;
@@ -9,12 +11,12 @@ using HWMS.Web.Extension;
 using HWMS.Web.Filter;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace HWMS.Web.Controllers
 {
-    [IsAuthorized]
     [ApiController]
     [Route("api/Order")]
     public class OrderController : ControllerBase
@@ -35,7 +37,7 @@ namespace HWMS.Web.Controllers
 
         }
 
-        
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -61,6 +63,24 @@ namespace HWMS.Web.Controllers
             }
             //this._OrderRegiestHandler.orderRegisteredEvent;
             return CreatedAtRoute(nameof(Get), new { id = this._OrderRegiestHandler.orderRegistered.Id });
+        }
+
+
+        [Route("File")]
+        [HttpPost]
+        [CheckFileUpload]
+        //[CheckFileUpload(BufferBody = true)]
+        public async Task<IActionResult> FileUpload(List<IFormFile> formFiles)
+        {
+            foreach (var formFile in formFiles)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await formFile.CopyToAsync(memoryStream);
+                    var temp = formFile.FileName;
+                }
+            }
+            return Ok();
         }
     }
 }

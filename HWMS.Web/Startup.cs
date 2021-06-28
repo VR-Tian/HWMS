@@ -19,6 +19,7 @@ using HWMS.Infrastructure;
 using HWMS.Infrastructure.Bus;
 using HWMS.Infrastructure.Contexts;
 using HWMS.Infrastructure.Repository;
+using HWMS.Web.Extension;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -96,14 +97,14 @@ namespace HWMS.Web
                     ValidateLifetime = true,
                 };
             });
-//             services.AddAuthorization(options =>
-//             {
-//                 var defaultAuthorizationPolicyBuilder = new AuthorizationPolicyBuilder(
-//                            JwtBearerDefaults.AuthenticationScheme);
-//                 defaultAuthorizationPolicyBuilder =
-// defaultAuthorizationPolicyBuilder.RequireAuthenticatedUser();
-//                 options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
-//             });
+            //             services.AddAuthorization(options =>
+            //             {
+            //                 var defaultAuthorizationPolicyBuilder = new AuthorizationPolicyBuilder(
+            //                            JwtBearerDefaults.AuthenticationScheme);
+            //                 defaultAuthorizationPolicyBuilder =
+            // defaultAuthorizationPolicyBuilder.RequireAuthenticatedUser();
+            //                 options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
+            //             });
 
 
         }
@@ -128,6 +129,7 @@ namespace HWMS.Web
                 await next.Invoke();
             });
 
+
             // app.Run(async context =>
             // {
             //     System.Console.WriteLine("app.Run start");
@@ -142,7 +144,10 @@ namespace HWMS.Web
 
             app.UseRouting();
 
-            app.UseAuthorization();//身份验证一般位于路由之后（判断身份验证是否有权访问对应资源）
+           
+
+            //app.UseIsAuthorized();
+            // app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

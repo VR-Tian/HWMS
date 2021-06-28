@@ -78,3 +78,4 @@ D:\IDE\HWMSApp\HWMS.Web\obj\Release\netcoreapp3.1\HWMS.Web.csproj.CopyComplete
 D:\IDE\HWMSApp\HWMS.Web\obj\Release\netcoreapp3.1\HWMS.Web.dll
 D:\IDE\HWMSApp\HWMS.Web\obj\Release\netcoreapp3.1\HWMS.Web.pdb
 D:\IDE\HWMSApp\HWMS.Web\obj\Release\netcoreapp3.1\HWMS.Web.genruntimeconfig.cache
+D:\IDE\HWMSApp\HWMS.Web\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

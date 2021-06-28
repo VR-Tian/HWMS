@@ -10,6 +10,7 @@ D:\IDE\HWMSApp\published\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\IDE\HWMSApp\published\FluentValidation.dll
 D:\IDE\HWMSApp\published\MediatR.dll
 D:\IDE\HWMSApp\published\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\IDE\HWMSApp\published\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\IDE\HWMSApp\published\Microsoft.Bcl.AsyncInterfaces.dll
 D:\IDE\HWMSApp\published\Microsoft.Bcl.HashCode.dll
 D:\IDE\HWMSApp\published\Microsoft.Data.SqlClient.dll

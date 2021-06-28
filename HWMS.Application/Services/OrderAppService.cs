@@ -81,6 +81,7 @@ namespace HWMS.Application.Services
 
         public void Update(OrderViewModel OrderViewModel)
         {
+            this._OrderRepository.GetAll();
             throw new NotImplementedException();
         }
 
