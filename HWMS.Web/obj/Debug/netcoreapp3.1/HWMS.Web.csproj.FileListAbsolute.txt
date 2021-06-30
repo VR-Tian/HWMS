@@ -68,7 +68,6 @@ D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.csprojAssemblyReference
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.AssemblyInfoInputs.cache
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.AssemblyInfo.cs
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.csproj.CoreCompileInputs.cache
-D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.MvcApplicationPartsAssemblyInfo.cs
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.MvcApplicationPartsAssemblyInfo.cache
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\staticwebassets\HWMS.Web.StaticWebAssets.Manifest.cache
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\staticwebassets\HWMS.Web.StaticWebAssets.xml
@@ -79,3 +78,9 @@ D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.dll
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.pdb
 D:\IDE\HWMSApp\HWMS.Web\obj\Debug\netcoreapp3.1\HWMS.Web.genruntimeconfig.cache
 D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\NPOI.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+D:\IDE\HWMSApp\HWMS.Web\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Threading.Tasks;
 using HWMS.Application.Interfaces;
+using HWMS.Application.Services;
 using HWMS.Application.ViewModels;
 using HWMS.DoMain.Core.Notifications;
 using HWMS.DoMain.EventHandlers;
@@ -70,15 +72,21 @@ namespace HWMS.Web.Controllers
         [HttpPost]
         [CheckFileUpload]
         //[CheckFileUpload(BufferBody = true)]
-        public async Task<IActionResult> FileUpload(List<IFormFile> formFiles)
+        public async Task<IActionResult> FileUpload([FromForm] List<IFormFile> formFiles, [FromHeader] string title)
         {
             foreach (var formFile in formFiles)
             {
+                DataTable tb = null;
+                List<TextModel> getList = null;
                 using (var memoryStream = new MemoryStream())
                 {
                     await formFile.CopyToAsync(memoryStream);
-                    var temp = formFile.FileName;
+                    tb = await FileService.ExecuteReadExcelForStream(memoryStream);
+                    getList = tb.TranT<TextModel>();
+                    //FileService fileService = new FileService();
+                    //tb = await fileService.ExecuteReadExcelForStream(memoryStream);
                 }
+                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(getList));
             }
             return Ok();
         }
