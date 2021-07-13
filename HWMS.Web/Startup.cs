@@ -62,7 +62,7 @@ namespace HWMS.Web
             services.AddScoped<IOrderAppService, OrderAppService>();
             services.AddScoped<IUserAppService, UserAppService>();
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
-            // services.AddScoped<IUserAppService, UserAppService>();
+            //services.AddScoped<IUserAppService, UserAppService>();
             // services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IMemoryCache, MemoryCache>();
 
@@ -141,14 +141,12 @@ namespace HWMS.Web
 
             //app.UseHttpsRedirection();
             app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseRouting();
-
-           
-
-            //app.UseIsAuthorized();
-            // app.UseAuthorization();
-
+            app.UseIsAuthorized();
+           // app.UseRecordRequestLog();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

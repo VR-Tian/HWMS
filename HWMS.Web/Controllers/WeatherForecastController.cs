@@ -29,7 +29,7 @@ namespace HWMS.Web.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var getdata = _OrderAppService.GetAll();
+            //var getdata = _OrderAppService.GetAll();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

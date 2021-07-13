@@ -12,3 +12,17 @@ D:\IDE\HWMSApp\HWMS.Application\bin\Debug\netstandard2.0\HWMS.DoMain.Core.pdb
 D:\IDE\HWMSApp\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.csproj.CopyComplete
 D:\IDE\HWMSApp\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.dll
 D:\IDE\HWMSApp\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.pdb
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.Application.deps.json
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.Application.dll
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.Application.pdb
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.DoMain.Core.dll
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.DoMain.dll
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.DoMain.pdb
+E:\Personal\HWMS\HWMS.Application\bin\Debug\netstandard2.0\HWMS.DoMain.Core.pdb
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.csprojAssemblyReference.cache
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.AssemblyInfoInputs.cache
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.AssemblyInfo.cs
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.csproj.CoreCompileInputs.cache
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.csproj.CopyComplete
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.dll
+E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.0\HWMS.Application.pdb

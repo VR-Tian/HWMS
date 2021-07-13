@@ -15,7 +15,7 @@ namespace HWMS.Application.Services
 {
     public static class FileService
     {
-        public static async Task<DataTable> ExecuteReadExcelForStream(Stream stream)
+        public static async Task<DataTable> ExecuteReadExcelOfStream(Stream stream)
         {
             DataTable dtTable = new DataTable();
             List<string> rowList = new List<string>();
@@ -55,7 +55,13 @@ namespace HWMS.Application.Services
             return dtTable;
         }
 
-        public static List<T> TranT<T>(this DataTable dataTable)
+        /// <summary>
+        /// 针对具有中文字段的Datable序列化集合泛型类型
+        /// </summary>
+        /// <typeparam name="T">序列化泛型类型</typeparam>
+        /// <param name="dataTable">中文字段的Datable</param>
+        /// <returns>集合泛型类型</returns>
+        public static List<T> ChinaColumnToList<T>(this DataTable dataTable)
         {
             List<T> returnData = new List<T>();
             try
@@ -67,14 +73,44 @@ namespace HWMS.Application.Services
                     {
                         foreach (var item in typeof(T).GetProperties())
                         {
-                            var genericCloumnName = (DisplayNameAttribute)item.GetCustomAttributes(true).FirstOrDefault(x => x is DisplayNameAttribute);
+                            var genericCloumnName = item.GetCustomAttributes(true).FirstOrDefault(x => x is DisplayNameAttribute) as DisplayNameAttribute;
                             if (genericCloumnName!=null&& genericCloumnName.DisplayName.Equals(dataTable.Columns[j].ColumnName))
                             {
-                                var getValue = dataTable.Rows[i][dataTable.Columns[j].ColumnName];
-                                Console.WriteLine(getValue);
+                                var isConver = false;
+                                var getValue = dataTable.Rows[i][dataTable.Columns[j].ColumnName].ToString();
                                 if (item.PropertyType == typeof(int))
                                 {
-                                    item.SetValue(model, Convert.ToInt16(getValue));
+                                    isConver = true;
+                                    item.SetValue(model, Convert.ToInt32(getValue));
+                                }
+                                if (item.PropertyType == typeof(string))
+                                {
+                                    isConver = true;
+                                    item.SetValue(model, getValue);
+                                }
+                                if (item.PropertyType == typeof(DateTime))
+                                {
+                                    isConver = true;
+                                    item.SetValue(model, DateTime.Parse(getValue));
+                                }
+                                if (item.PropertyType == typeof(decimal))
+                                {
+                                    isConver = true;
+                                    item.SetValue(model, decimal.Parse(getValue));
+                                }
+                                if (item.PropertyType == typeof(double))
+                                {
+                                    isConver = true;
+                                    item.SetValue(model, double.Parse(getValue));
+                                }
+                                if (item.PropertyType == typeof(float))
+                                {
+                                    isConver = true;
+                                    item.SetValue(model, float.Parse(getValue));
+                                }
+                                if (!isConver)
+                                {
+                                    throw new Exception("PropertyType is undefined");
                                 }
                                 break;
                             }

@@ -43,5 +43,13 @@ namespace HWMS.DoMain.Models
 
         public Address Address { get; private set; }
 
+        public OrderStatus Status { get; set; }
+
+    }
+
+    public enum OrderStatus:int
+    {
+        创建=0,
+        提交=1
     }
 }

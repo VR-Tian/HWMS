@@ -3,7 +3,7 @@
 <!-- 职责 ：协调业务流程-->
 <!-- 疑惑：在Application层EF引用是否造成项目组件依赖混乱（侵入性） -->
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

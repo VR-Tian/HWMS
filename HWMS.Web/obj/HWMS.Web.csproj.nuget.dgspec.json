@@ -1,35 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IDE\\HWMSApp\\HWMS.Web\\HWMS.Web.csproj": {}
+    "E:\\Personal\\HWMS\\HWMS.Web\\HWMS.Web.csproj": {}
   },
   "projects": {
-    "D:\\IDE\\HWMSApp\\HWMS.Application\\HWMS.Application.csproj": {
+    "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IDE\\HWMSApp\\HWMS.Application\\HWMS.Application.csproj",
+        "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj",
         "projectName": "HWMS.Application",
-        "projectPath": "D:\\IDE\\HWMSApp\\HWMS.Application\\HWMS.Application.csproj",
-        "packagesPath": "C:\\Users\\vrtian\\.nuget\\packages\\",
-        "outputPath": "D:\\IDE\\HWMSApp\\HWMS.Application\\obj\\",
+        "projectPath": "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj",
+        "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\HWMS\\HWMS.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vrtian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj"
+              "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj"
               }
             }
           }
@@ -41,8 +44,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -55,12 +58,6 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[6.11.1, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             },
             "NPOI": {
               "target": "Package",
@@ -85,33 +82,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
+    "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
+        "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
         "projectName": "HWMS.DoMain.Core",
-        "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
-        "packagesPath": "C:\\Users\\vrtian\\.nuget\\packages\\",
-        "outputPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\obj\\",
+        "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
+        "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vrtian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -122,8 +127,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
@@ -132,12 +137,6 @@
             "MediatR": {
               "target": "Package",
               "version": "[9.0.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -150,36 +149,44 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj": {
+    "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj",
+        "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj",
         "projectName": "HWMS.DoMain",
-        "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj",
-        "packagesPath": "C:\\Users\\vrtian\\.nuget\\packages\\",
-        "outputPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\obj\\",
+        "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj",
+        "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\HWMS\\HWMS.DoMain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vrtian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj"
+              "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj"
               }
             }
           }
@@ -191,18 +198,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
               "version": "[9.3.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -215,39 +216,47 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\IDE\\HWMSApp\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj": {
+    "E:\\Personal\\HWMS\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IDE\\HWMSApp\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj",
         "projectName": "HWMS.Infrastructure",
-        "projectPath": "D:\\IDE\\HWMSApp\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\vrtian\\.nuget\\packages\\",
-        "outputPath": "D:\\IDE\\HWMSApp\\HWMS.Infrastructure\\obj\\",
+        "projectPath": "E:\\Personal\\HWMS\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\HWMS\\HWMS.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vrtian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj"
+              "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj"
               },
-              "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj"
+              "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj"
               }
             }
           }
@@ -259,8 +268,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "MediatR": {
               "target": "Package",
@@ -268,7 +277,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -280,11 +289,9 @@
               "target": "Package",
               "version": "[3.1.9, )"
             },
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Oracle.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[5.21.1, )"
             }
           },
           "imports": [
@@ -297,21 +304,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\IDE\\HWMSApp\\HWMS.Web\\HWMS.Web.csproj": {
+    "E:\\Personal\\HWMS\\HWMS.Web\\HWMS.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IDE\\HWMSApp\\HWMS.Web\\HWMS.Web.csproj",
+        "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.Web\\HWMS.Web.csproj",
         "projectName": "HWMS.Web",
-        "projectPath": "D:\\IDE\\HWMSApp\\HWMS.Web\\HWMS.Web.csproj",
-        "packagesPath": "C:\\Users\\vrtian\\.nuget\\packages\\",
-        "outputPath": "D:\\IDE\\HWMSApp\\HWMS.Web\\obj\\",
+        "projectPath": "E:\\Personal\\HWMS\\HWMS.Web\\HWMS.Web.csproj",
+        "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\HWMS\\HWMS.Web\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vrtian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -325,14 +340,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\IDE\\HWMSApp\\HWMS.Application\\HWMS.Application.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.Application\\HWMS.Application.csproj"
+              "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj"
               },
-              "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain\\HWMS.DoMain.csproj"
+              "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj"
               },
-              "D:\\IDE\\HWMSApp\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj": {
-                "projectPath": "D:\\IDE\\HWMSApp\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj"
+              "E:\\Personal\\HWMS\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj": {
+                "projectPath": "E:\\Personal\\HWMS\\HWMS.Infrastructure\\HWMS.Infrastructure.csproj"
               }
             }
           }
@@ -400,7 +415,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

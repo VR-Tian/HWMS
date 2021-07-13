@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.Web", "HWMS.Web\HWMS.Web.csproj", "{7E7901E6-C0C2-4550-8C8C-C56CBA828F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.Web", "HWMS.Web\HWMS.Web.csproj", "{7E7901E6-C0C2-4550-8C8C-C56CBA828F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.Application", "HWMS.Application\HWMS.Application.csproj", "{7ED9B0F0-078D-487B-B75F-1B5F22D11DA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.Application", "HWMS.Application\HWMS.Application.csproj", "{7ED9B0F0-078D-487B-B75F-1B5F22D11DA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.DoMain", "HWMS.DoMain\HWMS.DoMain.csproj", "{BD77E803-7E53-40BA-B3C4-652583AF8025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.DoMain", "HWMS.DoMain\HWMS.DoMain.csproj", "{BD77E803-7E53-40BA-B3C4-652583AF8025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.Infrastructure", "HWMS.Infrastructure\HWMS.Infrastructure.csproj", "{8A726273-C827-4AC8-A7D9-2E5D343A67CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.Infrastructure", "HWMS.Infrastructure\HWMS.Infrastructure.csproj", "{8A726273-C827-4AC8-A7D9-2E5D343A67CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMS.DoMain.Core", "HWMS.DoMain.Core\HWMS.DoMain.Core.csproj", "{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.DoMain.Core", "HWMS.DoMain.Core\HWMS.DoMain.Core.csproj", "{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7E7901E6-C0C2-4550-8C8C-C56CBA828F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +83,11 @@ Global
 		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x64.Build.0 = Release|Any CPU
 		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x86.ActiveCfg = Release|Any CPU
 		{CE8A5E6B-B9F0-4578-9181-B9C1E9A72931}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D33E27B-E9A8-4F1A-A5C6-8FFAE7846778}
 	EndGlobalSection
 EndGlobal

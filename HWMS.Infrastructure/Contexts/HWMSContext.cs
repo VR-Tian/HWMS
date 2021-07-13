@@ -27,7 +27,7 @@ namespace HWMS.Infrastructure.Contexts
         {
             //TODO 通过配置文件读取。
             // 定义要使用的数据库
-            optionsBuilder.UseSqlServer("server=.;uid=sa;pwd=Ljt1994..;database=HWMSApp");
+            optionsBuilder.UseOracle("User Id=adl_bzgl_basetest;Password=adl_bzgl123456;Data Source=192.168.10.247/GZBMI", option => { option.UseOracleSQLCompatibility("11"); });
         }
     }
 }

@@ -1,0 +1,8 @@
+E:\Personal\HWMS\HWMS.DoMain.Core\bin\Debug\netstandard2.1\HWMS.DoMain.Core.deps.json
+E:\Personal\HWMS\HWMS.DoMain.Core\bin\Debug\netstandard2.1\HWMS.DoMain.Core.dll
+E:\Personal\HWMS\HWMS.DoMain.Core\bin\Debug\netstandard2.1\HWMS.DoMain.Core.pdb
+E:\Personal\HWMS\HWMS.DoMain.Core\obj\Debug\netstandard2.1\HWMS.DoMain.Core.AssemblyInfoInputs.cache
+E:\Personal\HWMS\HWMS.DoMain.Core\obj\Debug\netstandard2.1\HWMS.DoMain.Core.AssemblyInfo.cs
+E:\Personal\HWMS\HWMS.DoMain.Core\obj\Debug\netstandard2.1\HWMS.DoMain.Core.csproj.CoreCompileInputs.cache
+E:\Personal\HWMS\HWMS.DoMain.Core\obj\Debug\netstandard2.1\HWMS.DoMain.Core.dll
+E:\Personal\HWMS\HWMS.DoMain.Core\obj\Debug\netstandard2.1\HWMS.DoMain.Core.pdb

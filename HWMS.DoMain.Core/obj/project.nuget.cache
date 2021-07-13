@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rZk/R2zjQhekL51YKUcieMw/3Ni0sheQKU+iw0VTgJuKL8je78wLJEsVEBa5gg2qlDf02vizzcUgM4ek/NX7Kw==",
+  "dgSpecHash": "U+vec/NTnGcpPyzy7w2Md/igeCEqrl4FzuE/g+vhst+zsqrZF41J+h+LHH0rCKg8UbELYl6qO5OiPfwPMMw7iw==",
   "success": true,
-  "projectFilePath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
+  "projectFilePath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\vrtian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
-    "C:\\Users\\vrtian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
-    "C:\\Users\\vrtian\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\vrtian\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Tian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\Tian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

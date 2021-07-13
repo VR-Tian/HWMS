@@ -1,0 +1,12 @@
+E:\Personal\HWMS\HWMS.DoMain\bin\Debug\netcoreapp3.1\HWMS.DoMain.deps.json
+E:\Personal\HWMS\HWMS.DoMain\bin\Debug\netcoreapp3.1\HWMS.DoMain.dll
+E:\Personal\HWMS\HWMS.DoMain\bin\Debug\netcoreapp3.1\HWMS.DoMain.pdb
+E:\Personal\HWMS\HWMS.DoMain\bin\Debug\netcoreapp3.1\HWMS.DoMain.Core.dll
+E:\Personal\HWMS\HWMS.DoMain\bin\Debug\netcoreapp3.1\HWMS.DoMain.Core.pdb
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.csprojAssemblyReference.cache
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.AssemblyInfoInputs.cache
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.AssemblyInfo.cs
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.csproj.CoreCompileInputs.cache
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.csproj.CopyComplete
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.dll
+E:\Personal\HWMS\HWMS.DoMain\obj\Debug\netcoreapp3.1\HWMS.DoMain.pdb

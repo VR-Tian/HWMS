@@ -21,6 +21,7 @@ namespace HWMS.Web.Controllers
 {
     [ApiController]
     [Route("api/Order")]
+    
     public class OrderController : ControllerBase
     {
         private readonly IOrderAppService _OrderAppService;
@@ -70,7 +71,7 @@ namespace HWMS.Web.Controllers
 
         [Route("File")]
         [HttpPost]
-        [CheckFileUpload]
+        [CheckFileUpload(IsSaveFile =true)]
         //[CheckFileUpload(BufferBody = true)]
         public async Task<IActionResult> FileUpload([FromForm] List<IFormFile> formFiles, [FromHeader] string title)
         {
@@ -81,8 +82,8 @@ namespace HWMS.Web.Controllers
                 using (var memoryStream = new MemoryStream())
                 {
                     await formFile.CopyToAsync(memoryStream);
-                    tb = await FileService.ExecuteReadExcelForStream(memoryStream);
-                    getList = tb.TranT<TextModel>();
+                    tb = await FileService.ExecuteReadExcelOfStream(memoryStream);
+                    getList = tb.ChinaColumnToList<TextModel>();
                     //FileService fileService = new FileService();
                     //tb = await fileService.ExecuteReadExcelForStream(memoryStream);
                 }

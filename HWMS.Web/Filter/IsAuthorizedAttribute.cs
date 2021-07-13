@@ -19,6 +19,7 @@ namespace HWMS.Web.Filter
     /// 弃用：改用自定义中间件来进行身份授权
     public class IsAuthorizedAttribute : ActionFilterAttribute
     {
+        ///TODO：如何启用身份认证方案（Base,Bearer）
 
         private IUserAppService _UserAppService;
 
@@ -30,23 +31,35 @@ namespace HWMS.Web.Filter
             var isauthenticated = context.HttpContext.User.Identity.IsAuthenticated;
             var claimsIndentity = context.HttpContext.User.Identity as ClaimsIdentity;
             var clima = claimsIndentity.Claims.Where(t => t.Type == "USER_ID").FirstOrDefault();
-            var getuserPerissioninfo = _UserAppService.GetRolePermissionOfUser(int.Parse(clima.Value));
-
-            var allpermissinfo = getuserPerissioninfo.Select(t => (t.ControllerName + "/" + t.ActionName).ToUpper());
-
-            var accessRouteName = context.RouteData.Values["controller"].ToString() + "/" + context.RouteData.Values["action"].ToString();
-            if (!isauthenticated || !allpermissinfo.Contains(accessRouteName.ToUpper()))
+            if (clima == null)
             {
-                if (context.HttpContext.Request.IsAjaxRequest())
+                context.HttpContext.Response.StatusCode =
+                     (int)HttpStatusCode.Forbidden;
+                context.Result = new JsonResult("无权限访问");
+            }
+            else
+            {
+                var getuserPerissioninfo = _UserAppService.GetRolePermissionOfUser(int.Parse(clima.Value));
+
+                var allpermissinfo = getuserPerissioninfo.Select(t => (t.ControllerName + "/" + t.ActionName).ToUpper());
+
+                var accessRouteName = context.RouteData.Values["controller"].ToString() + "/" + context.RouteData.Values["action"].ToString();
+                if (!isauthenticated || !allpermissinfo.Contains(accessRouteName.ToUpper()))
                 {
-                    context.HttpContext.Response.StatusCode =
-                      (int)HttpStatusCode.Forbidden; //Set HTTP 403 - JRozario
-                }
-                else
-                {
-                    context.Result = new RedirectResult("~/NoPermission.html");
+                    if (context.HttpContext.Request.IsAjaxRequest())
+                    {
+                        context.HttpContext.Response.StatusCode =
+                          (int)HttpStatusCode.Forbidden; //Set HTTP 403 - JRozario
+                    }
+                    else
+                    {
+                        context.HttpContext.Response.StatusCode =
+                          (int)HttpStatusCode.Forbidden;
+                        context.Result = new JsonResult("无权限访问");
+                    }
                 }
             }
+         
             base.OnActionExecuting(context);
         }
 

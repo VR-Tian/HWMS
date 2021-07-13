@@ -42,7 +42,7 @@ namespace HWMS.Application.Services
             _TokenManagement.Audience,
             claims,
             expires: DateTime.Now.AddMinutes(_TokenManagement.AccessExpiration), signingCredentials: credentials);
-
+            
             token = new JwtSecurityTokenHandler().WriteToken(jwtToken);
 
             return true;

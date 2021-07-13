@@ -34,6 +34,8 @@ namespace HWMS.Application.ViewModels
         //[FileCloumnDisplayName("尺度")]
         [DisplayName("尺度")]
         public int Leng6 { get; set; }
+        [DisplayName("时间")]
+        public DateTime ETime { get; set; }
     }
 
     public class FileCloumnDisplayNameAttribute : Attribute

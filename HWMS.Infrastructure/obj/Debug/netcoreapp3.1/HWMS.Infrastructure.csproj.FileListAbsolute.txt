@@ -1,0 +1,17 @@
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.Infrastructure.deps.json
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.Infrastructure.runtimeconfig.json
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.Infrastructure.runtimeconfig.dev.json
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.Infrastructure.dll
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.Infrastructure.pdb
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.DoMain.Core.dll
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.DoMain.dll
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.DoMain.pdb
+E:\Personal\HWMS\HWMS.Infrastructure\bin\Debug\netcoreapp3.1\HWMS.DoMain.Core.pdb
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.csprojAssemblyReference.cache
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.AssemblyInfoInputs.cache
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.AssemblyInfo.cs
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.csproj.CopyComplete
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.dll
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.pdb
+E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netcoreapp3.1\HWMS.Infrastructure.genruntimeconfig.cache
