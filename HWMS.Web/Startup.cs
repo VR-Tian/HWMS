@@ -18,6 +18,7 @@ using HWMS.DoMain.Interfaces;
 using HWMS.Infrastructure;
 using HWMS.Infrastructure.Bus;
 using HWMS.Infrastructure.Contexts;
+using HWMS.Infrastructure.Contexts.OracleContext;
 using HWMS.Infrastructure.Repository;
 using HWMS.Web.Extension;
 using MediatR;
@@ -54,6 +55,7 @@ namespace HWMS.Web
             services.AddControllers();
             services.AddDbContext<HWMSContext>();
             services.AddDbContext<AccessContext>();
+            services.AddDbContext<O_HWMSContext>();
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
             services.AddAutoMapper(Assembly.Load("HWMS.Application"));
             services.AddScoped<IMediatorHandler, InMemoryBus>();
@@ -62,8 +64,8 @@ namespace HWMS.Web
             services.AddScoped<IOrderAppService, OrderAppService>();
             services.AddScoped<IUserAppService, UserAppService>();
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
-            //services.AddScoped<IUserAppService, UserAppService>();
-            // services.AddScoped<IUnitOfWork, UnitOfWork>();
+            
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IMemoryCache, MemoryCache>();
 
             services.AddScoped<IRequestHandler<RegisterOrderCommand, Unit>, OrderCommandHandler>();
@@ -140,11 +142,11 @@ namespace HWMS.Web
 
 
             //app.UseHttpsRedirection();
-            app.UseAuthentication();
+            //app.UseAuthentication();
             //app.UseAuthorization();
 
             app.UseRouting();
-            app.UseIsAuthorized();
+            //app.UseIsAuthorized();
            // app.UseRecordRequestLog();
             
             app.UseEndpoints(endpoints =>

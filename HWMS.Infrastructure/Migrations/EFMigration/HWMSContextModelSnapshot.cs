@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace HWMS.Infrastructure.Migrations
+namespace HWMS.Infrastructure.Migrations.EFMigration
 {
     [DbContext(typeof(HWMSContext))]
     partial class HWMSContextModelSnapshot : ModelSnapshot
@@ -15,8 +15,8 @@ namespace HWMS.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("HWMS.DoMain.Models.Access.NavigationMenu", b =>
@@ -154,8 +154,11 @@ namespace HWMS.Infrastructure.Migrations
 
                     b.Property<string>("OrderNumber")
                         .IsRequired()
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100);
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -175,6 +178,8 @@ namespace HWMS.Infrastructure.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("NavigationMenu");
                 });
 
             modelBuilder.Entity("HWMS.DoMain.Models.Access.UserRoleMapping", b =>
@@ -196,20 +201,20 @@ namespace HWMS.Infrastructure.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("City")
-                                .HasColumnName("City")
-                                .HasColumnType("varchar(50)");
+                                .HasColumnType("varchar(50)")
+                                .HasColumnName("City");
 
                             b1.Property<string>("County")
-                                .HasColumnName("County")
-                                .HasColumnType("varchar(50)");
+                                .HasColumnType("varchar(50)")
+                                .HasColumnName("County");
 
                             b1.Property<string>("Province")
-                                .HasColumnName("Province")
-                                .HasColumnType("varchar(50)");
+                                .HasColumnType("varchar(50)")
+                                .HasColumnName("Province");
 
                             b1.Property<string>("Street")
-                                .HasColumnName("Street")
-                                .HasColumnType("varchar(50)");
+                                .HasColumnType("varchar(50)")
+                                .HasColumnName("Street");
 
                             b1.HasKey("OrderId");
 
@@ -218,6 +223,18 @@ namespace HWMS.Infrastructure.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("OrderId");
                         });
+
+                    b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("HWMS.DoMain.Models.Access.Role", b =>
+                {
+                    b.Navigation("RoleMenuPermissions");
+                });
+
+            modelBuilder.Entity("HWMS.DoMain.Models.Access.User", b =>
+                {
+                    b.Navigation("RoleMappings");
                 });
 #pragma warning restore 612, 618
         }

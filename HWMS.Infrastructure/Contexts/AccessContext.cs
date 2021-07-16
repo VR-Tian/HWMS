@@ -3,7 +3,6 @@ using HWMS.DoMain.Models;
 using HWMS.DoMain.Models.Access;
 using HWMS.Infrastructure.Mappings;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace HWMS.Infrastructure.Contexts
 {

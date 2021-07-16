@@ -9,6 +9,12 @@ namespace HWMS.Infrastructure.Contexts
 {
     public class HWMSContext : DbContext
     {
+        private readonly IConfiguration _configuration;
+        public HWMSContext(IConfiguration configuration):base()
+        {
+            
+        }
+
         public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserRoleMapping> UserRoleMappings { get; set; }
@@ -27,7 +33,7 @@ namespace HWMS.Infrastructure.Contexts
         {
             //TODO 通过配置文件读取。
             // 定义要使用的数据库
-            optionsBuilder.UseOracle("User Id=adl_bzgl_basetest;Password=adl_bzgl123456;Data Source=192.168.10.247/GZBMI", option => { option.UseOracleSQLCompatibility("11"); });
+            optionsBuilder.UseSqlServer("server=.;uid=sa;pwd=Ljt1994..;database=HWMSApp");
         }
     }
 }
