@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace HWMS.Infrastructure.Migrations.OracleMigration
+namespace HWMS.Infrastructure.Migrations.EFMigration
 {
     public partial class Initial : Migration
     {
@@ -11,15 +11,15 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                 name: "NavigationMenus",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "1, 1"),
-                    ParentMenuId = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    Name = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    ControllerName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    ActionName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    DisplayOrder = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    Visible = table.Column<bool>(type: "NUMBER(1)", nullable: false),
-                    CreateTime = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ParentMenuId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ControllerName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ActionName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DisplayOrder = table.Column<int>(type: "int", nullable: false),
+                    Visible = table.Column<bool>(type: "bit", nullable: false),
+                    CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,15 +30,15 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     OrderNumber = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
                     OrderDate = table.Column<DateTime>(type: "Datetime", nullable: false),
-                    Province = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Province1 = table.Column<string>(type: "varchar(50)", nullable: true),
                     City = table.Column<string>(type: "varchar(50)", nullable: true),
                     County = table.Column<string>(type: "varchar(50)", nullable: true),
                     Street = table.Column<string>(type: "varchar(50)", nullable: true),
-                    Status = table.Column<int>(type: "NUMBER(10)", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -49,12 +49,12 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                 name: "Roles",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "1, 1"),
-                    ParentId = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    RoleName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    RoleCode = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    CreateTime = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ParentId = table.Column<int>(type: "int", nullable: false),
+                    RoleName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoleCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,10 +65,10 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "1, 1"),
-                    UserName = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
-                    Passwork = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Passwork = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -79,11 +79,11 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                 name: "RoleMenuPermissions",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "1, 1"),
-                    RoleId = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    NavigationMenuId = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    CreateTime = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    NavigationMenuId = table.Column<int>(type: "int", nullable: false),
+                    CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -106,11 +106,11 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                 name: "UserRoleMappings",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "NUMBER(10)", nullable: false)
-                        .Annotation("Oracle:Identity", "1, 1"),
-                    RoleId = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    UserId = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    CreateTime = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

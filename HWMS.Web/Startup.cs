@@ -15,11 +15,13 @@ using HWMS.DoMain.Core.Notifications;
 using HWMS.DoMain.EventHandlers;
 using HWMS.DoMain.Events;
 using HWMS.DoMain.Interfaces;
+using HWMS.DoMain.Interfaces.Oracle;
 using HWMS.Infrastructure;
 using HWMS.Infrastructure.Bus;
 using HWMS.Infrastructure.Contexts;
 using HWMS.Infrastructure.Contexts.OracleContext;
 using HWMS.Infrastructure.Repository;
+using HWMS.Infrastructure.Repository.Oracle;
 using HWMS.Web.Extension;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -64,7 +66,8 @@ namespace HWMS.Web
             services.AddScoped<IOrderAppService, OrderAppService>();
             services.AddScoped<IUserAppService, UserAppService>();
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
-            
+            services.AddScoped<INavigationMenuRepository, NavigationRepository>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IMemoryCache, MemoryCache>();
 
@@ -147,8 +150,8 @@ namespace HWMS.Web
 
             app.UseRouting();
             //app.UseIsAuthorized();
-           // app.UseRecordRequestLog();
-            
+            // app.UseRecordRequestLog();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

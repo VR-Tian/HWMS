@@ -3,15 +3,17 @@ using System;
 using HWMS.Infrastructure.Contexts.OracleContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oracle.EntityFrameworkCore.Metadata;
 
 namespace HWMS.Infrastructure.Migrations.OracleMigration
 {
     [DbContext(typeof(O_HWMSContext))]
-    partial class O_HWMSContextModelSnapshot : ModelSnapshot
+    [Migration("20210717161722_Inital")]
+    partial class Inital
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,8 +29,7 @@ namespace HWMS.Infrastructure.Migrations.OracleMigration
                         .HasAnnotation("Oracle:ValueGenerationStrategy", OracleValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ActionName")
-                        .HasMaxLength(1000)
-                        .HasColumnType("NVARCHAR2(1000)");
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("ControllerName")
                         .HasColumnType("NVARCHAR2(2000)");

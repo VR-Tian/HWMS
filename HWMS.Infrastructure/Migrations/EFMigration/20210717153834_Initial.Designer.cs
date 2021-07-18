@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HWMS.Infrastructure.Migrations.EFMigration
 {
     [DbContext(typeof(HWMSContext))]
-    [Migration("20210716152706_Initial")]
+    [Migration("20210717153834_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -212,7 +212,7 @@ namespace HWMS.Infrastructure.Migrations.EFMigration
 
                             b1.Property<string>("Province")
                                 .HasColumnType("varchar(50)")
-                                .HasColumnName("Province");
+                                .HasColumnName("Province1");
 
                             b1.Property<string>("Street")
                                 .HasColumnType("varchar(50)")

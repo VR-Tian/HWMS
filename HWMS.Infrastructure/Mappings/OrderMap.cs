@@ -23,7 +23,7 @@ namespace HWMS.Infrastructure.Mappings
             {
                 ar.Property(s => s.Province)
                    .HasColumnName("Province")
-                   .HasColumnType("varchar(50)");
+                   .HasColumnType("varchar(250)");
                 ar.Property(s => s.City)
                     .HasColumnName("City")
                     .HasColumnType("varchar(50)");

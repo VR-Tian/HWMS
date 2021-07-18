@@ -209,7 +209,7 @@ namespace HWMS.Infrastructure.Migrations.EFMigration
                                 .HasColumnName("County");
 
                             b1.Property<string>("Province")
-                                .HasColumnType("varchar(50)")
+                                .HasColumnType("varchar(250)")
                                 .HasColumnName("Province");
 
                             b1.Property<string>("Street")

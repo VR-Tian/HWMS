@@ -3,15 +3,17 @@ using System;
 using HWMS.Infrastructure.Contexts.OracleContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oracle.EntityFrameworkCore.Metadata;
 
 namespace HWMS.Infrastructure.Migrations.OracleMigration
 {
     [DbContext(typeof(O_HWMSContext))]
-    partial class O_HWMSContextModelSnapshot : ModelSnapshot
+    [Migration("20210718151527_UpdateNavigationOfLength")]
+    partial class UpdateNavigationOfLength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
