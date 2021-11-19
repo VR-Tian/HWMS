@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 
-namespace HWMS.Web.Extension
+namespace HWMS.API.Extension
 {
     public static class AjaxExtension
     {

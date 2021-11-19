@@ -13,9 +13,9 @@ namespace HWMS.Application.Services
     public class TokenAuthenticationService : IAuthenticateService
     {
         private readonly IUserAppService _UserService;
-        private readonly TokenManagement _TokenManagement;
+        private readonly TokenManagementOptions _TokenManagement;
 
-        public TokenAuthenticationService(IUserAppService userService, IOptions<TokenManagement> tokenManagement)
+        public TokenAuthenticationService(IUserAppService userService, IOptions<TokenManagementOptions> tokenManagement)
         {
             _UserService = userService;
             _TokenManagement = tokenManagement.Value;

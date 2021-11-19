@@ -2,7 +2,7 @@ using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HWMS.Web.Extension
+namespace HWMS.API.Extension
 {
     public static class PermissionExtension
     {

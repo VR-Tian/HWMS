@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.Web", "HWMS.Web\HWMS.Web.csproj", "{7E7901E6-C0C2-4550-8C8C-C56CBA828F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.API", "HWMS.Web\HWMS.API.csproj", "{7E7901E6-C0C2-4550-8C8C-C56CBA828F0B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HWMS.Application", "HWMS.Application\HWMS.Application.csproj", "{7ED9B0F0-078D-487B-B75F-1B5F22D11DA4}"
 EndProject

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {}
+    "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {}
   },
   "projects": {
-    "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
+    "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
+        "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
         "projectName": "HWMS.DoMain.Core",
-        "projectPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
-        "packagesPath": "C:\\Users\\vrtian\\.nuget\\packages\\",
-        "outputPath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\obj\\",
+        "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
+        "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vrtian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

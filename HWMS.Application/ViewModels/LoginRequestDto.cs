@@ -15,4 +15,11 @@ namespace HWMS.Application.ViewModels
         [JsonProperty("password")]
         public string Password { get; set; }
     }
+
+    public class LoginResponseDto
+    { 
+        public string UserName { get; set; }
+
+        public string Token { get; set; }
+    }
 }

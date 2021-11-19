@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HWMS.Web.Extension
+namespace HWMS.API.Extension
 {
     /// <summary>
     /// 请求日志中间件

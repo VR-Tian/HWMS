@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HWMS.Web.Filter
+namespace HWMS.API.Filter
 {
     public class CheckFileUploadAttribute : ActionFilterAttribute
     {

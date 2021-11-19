@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zAdwcg6oTSMiOXNhbABhZGPKWD/4Wvtt4otaLzW0sHGfklZsW3kFB7lpsK6G4YgJc4BQ6TsiXBsGP1+Y0APU6g==",
+  "dgSpecHash": "U+vec/NTnGcpPyzy7w2Md/igeCEqrl4FzuE/g+vhst+zsqrZF41J+h+LHH0rCKg8UbELYl6qO5OiPfwPMMw7iw==",
   "success": true,
-  "projectFilePath": "D:\\IDE\\HWMSApp\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
+  "projectFilePath": "E:\\Personal\\HWMS\\HWMS.DoMain.Core\\HWMS.DoMain.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\vrtian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
-    "C:\\Users\\vrtian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+    "C:\\Users\\Tian\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\Tian\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

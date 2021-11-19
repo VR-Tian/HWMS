@@ -8,11 +8,8 @@ namespace HWMS.Application.ViewModels
     /// <summary>
     /// 
     /// </summary>
-    public class OrderViewModel
+    public class OrderViewModel : BaseViewModel<Guid>
     {
-        // [Key]
-        public Guid Id { get; set; }
-
         // [Required(ErrorMessage = "The OrderNumber is Required")]
         // [MinLength(2)]
         // [MaxLength(100)]

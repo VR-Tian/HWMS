@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace HWMS.Web.Extension
+namespace HWMS.API.Extension
 {
     public class MyHandlerMiddleware
     {

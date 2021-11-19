@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HWMS.Application.Interfaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace HWMS.Web.Controllers
+namespace HWMS.API.Controllers
 {
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("api/WeatherForecast")]
     public class WeatherForecastController : ControllerBase
     {
         private readonly IOrderAppService _OrderAppService;
@@ -26,9 +30,27 @@ namespace HWMS.Web.Controllers
             this._OrderAppService = OrderAppService;
         }
 
+        [Authorize(Roles ="member")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            
+            //var getdata = _OrderAppService.GetAll();
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
+
+        [Authorize]
+        [HttpGet("Query")]
+        public IEnumerable<WeatherForecast> GetData()
+        {
+
             //var getdata = _OrderAppService.GetAll();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

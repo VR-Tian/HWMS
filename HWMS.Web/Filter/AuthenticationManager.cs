@@ -18,13 +18,12 @@ using Microsoft.Extensions.Options;
 namespace HWMS.Web.Filter
 {
     /// <summary>
-    /// 
+    /// 身份验证方案的处理程序
     /// </summary>
-    public class AuthenticationManager<T> : IAuthenticationHandler where T: AuthenticationSchemeOptions,new()
+    public class AuthenticationManager : IAuthenticationHandler
     {
-
-      
-        ///TODO：如何启用身份认证方案（Base,Bearer）
+        ///TODO：关于其他身份验证方案的处理程序（Base,Bearer,JWT）
+        ///
         public Task<AuthenticateResult> AuthenticateAsync()
         {
             throw new System.NotImplementedException();
@@ -44,7 +43,5 @@ namespace HWMS.Web.Filter
         {
             throw new System.NotImplementedException();
         }
-
     }
-
 }

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HWMS.API</name>
+    </assembly>
+    <members>
+        <member name="T:HWMS.API.Controllers.OrderController">
+            <summary>
+            订单资源接口
+            </summary>
+        </member>
+        <member name="M:HWMS.API.Controllers.OrderController.Delete(System.Guid)">
+            <summary>
+            删除订单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HWMS.API.Controllers.OrderController.Update(System.Guid,HWMS.Application.ViewModels.OrderViewModel)">
+            <summary>
+            修改订单
+            </summary>
+            <param name="id"></param>
+            <param name="viewModel">修改订单的参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HWMS.API.Controllers.OrderController.Get">
+            <summary>
+            查询订单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HWMS.API.Controllers.OrderController.Get(System.Guid)">
+            <summary>
+            查询订单
+            </summary>
+            <param name="id">订单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HWMS.API.Controllers.OrderController.CreateAsync(HWMS.Application.ViewModels.OrderViewModel)">
+            <summary>
+            创建订单
+            </summary>
+            <param name="viewModel">创建订单参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HWMS.API.Controllers.OrderController.Create(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile},System.String)">
+            <summary>
+            创建订单
+            </summary>
+            <param name="formFiles">根据上传文件创建订单</param>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HWMS.API.Extension.HWMSMiddlewareExtensions">
+            <summary>
+            注册中间件拓展
+            </summary>
+        </member>
+        <member name="M:HWMS.API.Extension.HWMSMiddlewareExtensions.UseIsAuthorized(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            使用自定义身份授权
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HWMS.API.Extension.HWMSMiddlewareExtensions.UseRecordRequestLog(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            使用记录请求日志
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HWMS.API.Extension.InstanceDIExtensions">
+            <summary>
+            注册注入实例对象的拓展
+            </summary>
+        </member>
+        <member name="M:HWMS.API.Extension.InstanceDIExtensions.AddInstances(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注入项目所依赖的实例对象
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:HWMS.API.Extension.IsAuthorizedMiddleware">
+            <summary>
+            身份授权中间件
+            </summary>
+        </member>
+        <member name="T:HWMS.API.Extension.MinimumAgeRequirement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HWMS.API.Extension.RequestLoggerMiddleware">
+            <summary>
+            请求日志中间件
+            </summary>
+        </member>
+        <member name="P:HWMS.API.Filter.CheckFileUploadAttribute.PermittedFileSize">
+            <summary>
+            允许文件大小(MB为单位)
+            </summary>
+        </member>
+        <member name="T:HWMS.API.Filter.CustomAuthorizationHandler">
+            <summary>
+            实现自定义授权认证逻辑
+            </summary>
+            <remarks>
+            动态控制业务API的授权策略
+            </remarks>
+        </member>
+        <member name="T:HWMS.API.Filter.HWMSAuthenticationHandler">
+            <summary>
+            系统重写的Cookie身份验证
+            </summary>
+            <remarks>CookieAuthenticationHandler,</remarks>
+        </member>
+        <member name="T:HWMS.API.Filter.IsAuthorizedAttribute">
+            <summary>
+            
+            </summary>
+            弃用：改用自定义中间件来进行身份授权
+        </member>
+        <member name="F:HWMS.API.Filter.IsAuthorizedAttribute._UserAppService">
+            TODO：如何启用身份认证方案（Base,Bearer）
+        </member>
+    </members>
+</doc>

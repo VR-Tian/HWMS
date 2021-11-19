@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace HWMS.Web.Extension
+namespace HWMS.API.Extension
 {
     /// <summary>
     /// 身份授权中间件

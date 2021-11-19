@@ -1,0 +1,5 @@
+E:\Personal\HWMS\published\HWMS.DoMain.Core.dll
+E:\Personal\HWMS\published\HWMS.DoMain.Core.deps.json
+E:\Personal\HWMS\published\HWMS.DoMain.Core.pdb
+E:\Personal\HWMS\published\FluentValidation.dll
+E:\Personal\HWMS\published\MediatR.dll

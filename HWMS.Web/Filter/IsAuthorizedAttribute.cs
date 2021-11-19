@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Claims;
 using HWMS.Application.Interfaces;
-using HWMS.Web.Extension;
+using HWMS.API.Extension;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace HWMS.Web.Filter
+namespace HWMS.API.Filter
 {
     /// <summary>
     /// 

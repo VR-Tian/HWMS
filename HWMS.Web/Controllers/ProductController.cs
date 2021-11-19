@@ -2,7 +2,7 @@ using System;
 using HWMS.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HWMS.Web.Controllers
+namespace HWMS.API.Controllers
 {
     [Route("/api/Product")]
     public class ProductController : ControllerBase

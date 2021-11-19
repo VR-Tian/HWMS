@@ -1,6 +1,6 @@
 using System;
 
-namespace HWMS.Web
+namespace HWMS.API
 {
     public class WeatherForecast
     {
