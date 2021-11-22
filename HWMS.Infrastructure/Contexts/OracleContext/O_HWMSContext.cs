@@ -35,7 +35,7 @@ namespace HWMS.Infrastructure.Contexts.OracleContext
             // 定义要使用的数据库
             //Data Source=xxx:1521/orcl; User Id=xxx; password=xxx;Pooling=false;
             //Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=172.19.19.187)(PORT=6521))(CONNECT_DATA=(SERVICE_NAME=easa)));User ID=User;Password=Pass;
-            optionsBuilder.UseOracle(@"Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=192.168.1.101)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=helowin)));User ID=admin;Password=Ljt1994;", option => { option.UseOracleSQLCompatibility("11"); });
+            optionsBuilder.UseOracle(@"Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=192.168.10.247)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=GZBMI)));User ID=adl_bzgl_basetest;Password=adl_bzgl123456;", option => { option.UseOracleSQLCompatibility("11"); });
         }
     }
 }

@@ -13,18 +13,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
     <PackageReference Include="Oracle.EntityFrameworkCore" Version="5.21.1" />
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HWMS.DoMain\HWMS.DoMain.csproj" />
     <ProjectReference Include="..\HWMS.DoMain.Core\HWMS.DoMain.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Mappings\Oracle\" />
-    <Folder Include="Migrations\OrderMigration\" />
-    <Folder Include="Migrations\Oracle\" />
   </ItemGroup>
 
 </Project>

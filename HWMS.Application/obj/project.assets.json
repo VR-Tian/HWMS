@@ -1611,38 +1611,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tian\\.nuget\\packages\\": {},
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj",
+      "projectUniqueName": "\\\\192.168.10.170\\hwms\\HWMS.Application\\HWMS.Application.csproj",
       "projectName": "HWMS.Application",
-      "projectPath": "E:\\Personal\\HWMS\\HWMS.Application\\HWMS.Application.csproj",
-      "packagesPath": "C:\\Users\\Tian\\.nuget\\packages\\",
-      "outputPath": "E:\\Personal\\HWMS\\HWMS.Application\\obj\\",
+      "projectPath": "\\\\192.168.10.170\\hwms\\HWMS.Application\\HWMS.Application.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "\\\\192.168.10.170\\hwms\\HWMS.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj": {
-              "projectPath": "E:\\Personal\\HWMS\\HWMS.DoMain\\HWMS.DoMain.csproj"
+            "\\\\192.168.10.170\\hwms\\HWMS.DoMain\\HWMS.DoMain.csproj": {
+              "projectPath": "\\\\192.168.10.170\\hwms\\HWMS.DoMain\\HWMS.DoMain.csproj"
             }
           }
         }
@@ -1655,7 +1656,6 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -1697,7 +1697,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

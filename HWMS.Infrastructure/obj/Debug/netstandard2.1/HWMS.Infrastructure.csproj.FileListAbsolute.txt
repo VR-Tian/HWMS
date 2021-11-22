@@ -26,3 +26,17 @@ E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructur
 E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.csproj.CopyComplete
 E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.dll
 E:\Personal\HWMS\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.pdb
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.Infrastructure.deps.json
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.Infrastructure.dll
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.Infrastructure.pdb
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.DoMain.Core.dll
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.DoMain.dll
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.DoMain.pdb
+\\192.168.10.170\hwms\HWMS.Infrastructure\bin\Debug\netstandard2.1\HWMS.DoMain.Core.pdb
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.csprojAssemblyReference.cache
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.AssemblyInfoInputs.cache
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.AssemblyInfo.cs
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.csproj.CoreCompileInputs.cache
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.csproj.CopyComplete
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.dll
+\\192.168.10.170\hwms\HWMS.Infrastructure\obj\Debug\netstandard2.1\HWMS.Infrastructure.pdb

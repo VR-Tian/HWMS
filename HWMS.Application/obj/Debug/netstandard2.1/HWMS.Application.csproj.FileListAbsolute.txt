@@ -26,3 +26,17 @@ E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.cspr
 E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.csproj.CopyComplete
 E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.dll
 E:\Personal\HWMS\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.pdb
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.Application.deps.json
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.Application.dll
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.Application.pdb
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.DoMain.Core.dll
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.DoMain.dll
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.DoMain.pdb
+\\192.168.10.170\hwms\HWMS.Application\bin\Debug\netstandard2.1\HWMS.DoMain.Core.pdb
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.csprojAssemblyReference.cache
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.AssemblyInfoInputs.cache
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.AssemblyInfo.cs
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.csproj.CoreCompileInputs.cache
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.csproj.CopyComplete
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.dll
+\\192.168.10.170\hwms\HWMS.Application\obj\Debug\netstandard2.1\HWMS.Application.pdb
